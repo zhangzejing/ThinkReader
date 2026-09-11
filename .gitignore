@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-pages/
+.vinext/
+.wrangler/
+.DS_Store
+.env*

@@ -1,0 +1,7 @@
+html,body,#root{height:100%;width:100%;margin:0;overflow:hidden}.demo-pane{height:100%;display:flex;flex-direction:column;background:var(--surface-paper)}.demo-pane-title{padding:12px 16px;border-bottom:1px solid var(--line-subtle)}.conversation-panel{min-height:0;flex:1}.demo-keep,.demo-notice{font-size:12px;color:var(--accent)}.demo-notice{padding:6px 14px}.agents-navigation{flex-basis:180px}.conversation-message-body{min-width:0}.conversation-stream{scrollbar-width:none}.conversation-stream::-webkit-scrollbar{display:none}.demo-pane{--text-md:13px;--text-sm:12px}.demo-pane .conversation-message{padding-left:12px;padding-right:12px}.demo-pane .conversation-avatar{width:28px}.demo-pane .conversation-message-body header{font-size:12px}.demo-pane .composer-wrap{margin:8px}.demo-pane .composer-input{font-size:13px}.demo-pane .channel-user-avatar,.demo-pane .agent-avatar{width:28px;height:28px}
+
+#root.app-shell{display:block;min-width:0}.demo-pane-title{padding-right:40px}
+
+.demo-figure-quote{display:block;max-width:150px;max-height:170px;object-fit:contain;margin:8px 0;border:1px solid var(--line-subtle);border-radius:4px}
+
+.agents-inbox-list>button p{display:none}.demo-pane-title{padding-right:70px}

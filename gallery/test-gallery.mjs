@@ -1,0 +1,66 @@
+// Real-browser acceptance: node test-gallery.mjs [CDP port] [gallery URL]
+import assert from 'node:assert/strict';
+import { writeFile } from 'node:fs/promises';
+const host=`http://127.0.0.1:${process.argv[2]||8872}`;
+const url=process.argv[3]||'http://127.0.0.1:3000/';
+const target=await(await fetch(`${host}/json/new?${encodeURIComponent(url)}`,{method:'PUT'})).json();
+const socket=new WebSocket(target.webSocketDebuggerUrl),pending=new Map(),errors=[];let id=0;
+await new Promise(resolve=>socket.onopen=resolve);
+socket.onmessage=event=>{const m=JSON.parse(event.data);if(m.id){pending.get(m.id)?.(m);pending.delete(m.id);}if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails.text);};
+const send=(method,params={})=>new Promise((resolve,reject)=>{const key=++id;pending.set(key,r=>r.error?reject(Error(JSON.stringify(r.error))):resolve(r.result));socket.send(JSON.stringify({id:key,method,params}));});
+const evaluate=async expression=>{const r=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
+const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+async function until(expression){for(let n=0;n<100;n++){if(await evaluate(`Boolean(${expression})`))return;await wait(150);}throw Error(`Timed out: ${expression}`);}
+try{
+ await send('Runtime.enable');
+ await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});
+ await send('Page.reload');await until('document.querySelectorAll(".example").length===2');
+ assert.equal(await evaluate('document.querySelectorAll(".command-preview").length'),8);
+ assert.deepEqual(await evaluate('[...document.querySelectorAll(".feature-copy h2,.explore-heading h2")].map(n=>n.textContent)'),['Read in flow.','Multi agents and skills.','Intelligent layout.','Find what’s next.']);
+ assert(await evaluate('!document.querySelector(".feature-copy ul")'));
+ assert.deepEqual(await evaluate('[".hero h1",".hero p",".feature-copy h2",".feature-copy p"].map(selector=>getComputedStyle(document.querySelector(selector)).fontSize)'),['82px','36px','60px','24px'],'Hero remains dominant above the reference-sized feature copy');
+ assert(await evaluate('parseFloat(getComputedStyle(document.querySelector(".hero p")).fontSize)/parseFloat(getComputedStyle(document.querySelector(".hero h1")).fontSize)>.4'),'The subtitle has the requested visual weight');
+ await evaluate('window.scrollTo(0,0)');await wait(250);
+ const heroShot=await send('Page.captureScreenshot',{format:'png'});await writeFile('../build/gallery-hero.png',Buffer.from(heroShot.data,'base64'));
+
+ await evaluate('document.querySelector("#attention").scrollIntoView()');await wait(1500);
+ assert(await evaluate('document.querySelector(".workflow-large").clientHeight')>=600,'Large command frame retains its height');
+ await until('document.querySelector("#attention .live-preview iframe")?.contentWindow?.galleryApply');
+ assert(await evaluate('(()=>{const host=document.querySelector("#attention .live-preview").getBoundingClientRect(),frame=document.querySelector("#attention .live-preview iframe").getBoundingClientRect();return frame.width>=host.width-.5&&frame.height>=host.height-.5;})()'),'Live preview fills the entire thumbnail without white bands');
+ const shot=await send('Page.captureScreenshot',{format:'png'});await writeFile('../build/gallery-acceptance.png',Buffer.from(shot.data,'base64'));
+ assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true,'No horizontal overflow');
+ await evaluate('document.querySelector("#attention .command-preview:nth-child(3)").click()');
+ await until('document.querySelector("#attention .workflow-large:not([hidden]) iframe")?.contentDocument?.querySelector("#files button")');
+ assert.deepEqual(await evaluate('[...document.querySelector("#attention .workflow-large:not([hidden]) iframe").contentDocument.querySelectorAll("#files button")].map(e=>e.textContent)'),['README.md','SPEC.md','TODO.md']);
+ await until('document.querySelector("#attention .workflow-large:not([hidden]) iframe").contentDocument.querySelector(".real-agents")?.contentDocument?.querySelector("textarea")');
+ await evaluate(`(()=>{const d=document.querySelector('#attention .workflow-large:not([hidden]) iframe').contentDocument.querySelector('.real-agents').contentDocument;const i=d.querySelector('textarea');Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype,'value').set.call(i,'@Coder Explain the attention mechanism');i.dispatchEvent(new Event('input',{bubbles:true}));})()`);
+ await until('!document.querySelector("#attention .workflow-large:not([hidden]) iframe").contentDocument.querySelector(".real-agents").contentDocument.querySelector(".composer-send").disabled');
+ await evaluate('document.querySelector("#attention .workflow-large:not([hidden]) iframe").contentDocument.querySelector(".real-agents").contentDocument.querySelector(".composer-send").click()');
+ await until('document.querySelector("#attention .workflow-large:not([hidden]) iframe").contentDocument.querySelector(".real-agents")?.contentDocument?.querySelector(".conversation-stream")?.textContent.includes("Demo complete")');
+ await evaluate('document.querySelector("#atlases").scrollIntoView()');
+ await until('document.querySelector(".atlas-graph").contentDocument?.querySelector("#graph")?._cyreg?.cy?.nodes().length>0');
+ await until('document.querySelector(".atlas-note").contentDocument?.querySelector("#note h1")');
+ await evaluate('document.querySelectorAll(".atlas-separated")[1].scrollIntoView()');
+ await until('[...document.querySelectorAll(".atlas-graph")].every(f=>f.contentDocument?.querySelector("#graph")?._cyreg?.cy?.nodes().length>0)');
+ const labelSizes=await evaluate('[...document.querySelectorAll(".atlas-graph")].map(f=>{const cy=f.contentDocument.querySelector("#graph")._cyreg.cy;return cy.nodes().first().numericStyle("font-size")*cy.zoom()})');
+ assert(Math.abs(labelSizes[0]-labelSizes[1])<.2,'Both overview graphs use the same visible label size');
+ await evaluate(`document.querySelector('.atlas-graph').contentDocument.querySelector('[data-mode="concept"]').click()`);
+ await until('document.querySelector(".atlas-graph").contentDocument.querySelector("#hulls path")');
+ const underlined=await evaluate(`(()=>{const d=document.querySelector('.atlas-graph').contentDocument,w=d.defaultView,h=d.querySelector('#graph'),cy=h._cyreg.cy,b=h.getBoundingClientRect(),ctx=d.createElement('canvas').getContext('2d');for(const path of d.querySelectorAll('#hulls path')){const shape=new w.Path2D(path.getAttribute('d'));for(let y=15;y<b.height;y+=15)for(let x=15;x<b.width;x+=15){if(!ctx.isPointInPath(shape,x,y)||cy.nodes().some(n=>{const p=n.renderedBoundingBox({includeLabels:true});return x>p.x1-10&&x<p.x2+10&&y>p.y1-10&&y<p.y2+10;}))continue;h.dispatchEvent(new w.PointerEvent('pointermove',{clientX:b.left+x,clientY:b.top+y}));const n=cy.nodes('.cluster-active').first(),label=h.querySelector('span');if(!n.length)continue;const active=label.style.display==='block'&&label.style.textDecoration==='underline';n.emit('mouseover');const overridden=label.style.display==='none';n.emit('mouseout');return active&&overridden&&label.style.display==='block';}}return false;})()`);
+ assert(underlined,'Hull hover underlines its center; node hover takes priority and leaving restores it');
+ await evaluate(`(()=>{const d=document.querySelector('.atlas-graph').contentDocument;d.querySelector('#clusters').value=0;d.querySelector('#clusters').dispatchEvent(new Event('input'));})()`);
+ assert.equal(await evaluate('document.querySelector(".atlas-graph").contentDocument.querySelector("#cluster-count").textContent'),'0');
+ const initialNote=await evaluate('document.querySelector(".atlas-note").contentDocument.querySelector("#note").textContent');
+ const expected=await evaluate(`(()=>{const d=document.querySelector('.atlas-graph').contentDocument;const n=d.querySelector('#graph')._cyreg.cy.nodes('.paper').last();n.emit('tap');return n.id();})()`);
+ await wait(500);
+ assert(await evaluate('document.querySelector(".atlas-note").contentDocument.querySelector("#note").textContent.length>100'),'Separate note reader receives content');
+ assert(expected,'A real paper node was selected');
+ assert.notEqual(await evaluate('document.querySelector(".atlas-note").contentDocument.querySelector("#note").textContent'),initialNote,'Graph click updates the separate note');
+ const atlasShot=await send('Page.captureScreenshot',{format:'png'});await writeFile('../build/gallery-atlases-acceptance.png',Buffer.from(atlasShot.data,'base64'));
+ await evaluate('document.querySelector(".header-actions button").click()');
+ assert.equal(await evaluate('document.documentElement.lang'),'zh-CN');
+ await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:false});await wait(300);
+ assert(await evaluate('document.documentElement.scrollWidth<=innerWidth'),'Mobile page stays within the viewport');
+ assert.deepEqual(errors,[]);
+ console.log('PASS: four command previews, live codebase input, separate atlas reader, zero clusters, language toggle and mobile width');
+}finally{socket.close();await fetch(`${host}/json/close/${target.id}`);}

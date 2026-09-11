@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="270 160 900 900">
+  <title>ThinkReader</title>
+  <defs>
+    <filter id="t-shadow" x="-20%" y="-15%" width="145%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="4" dy="7" stdDeviation="5" flood-color="#000" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect x="270" y="160" width="900" height="900" fill="#fff"/>
+  <path fill="#8a5cf5" fill-opacity=".34" d="M423 209 L700 203 Q712 203 710 216 L670 991 Q670 1003 657 1004 L383 1011 Q371 1011 372 998 L411 221 Q411 209 423 209Z"/>
+  <path fill="#000" filter="url(#t-shadow)" d="M352 332 H772 L783 455 H756 C736 389 716 371 660 371 H613 V852 C613 881 626 890 669 896 V915 H445 V896 C491 890 505 880 505 852 V373 C425 363 387 374 365 455 H339Z"/>
+  <path fill="none" stroke="#000" stroke-width="38" stroke-linecap="round" stroke-linejoin="round" d="M890 558 L764 894 M754 623 C798 562 913 485 987 489 C1066 486 1049 551 1026 579 C989 628 911 684 831 731 C906 808 1006 869 1078 872"/>
+</svg>

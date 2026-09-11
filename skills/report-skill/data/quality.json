@@ -1,0 +1,18 @@
+{
+  "schema_version": "thinkreader-report-quality/1.0",
+  "_note": "Machine-readable quality thresholds for /report proposals. The App validator reads this resource; prose explanation lives in rules.md.",
+  "min_chars": 800,
+  "min_original_figure_images": 2,
+  "min_figure_table_refs": 2,
+  "placeholder_markers": [
+    "_TBD",
+    "Prepared by `/report"
+  ],
+  "hollow_headings": [
+    "论文的故事线",
+    "方法真正做了什么",
+    "关键结果如何理解",
+    "这篇文章最有价值的地方",
+    "硬边界"
+  ]
+}

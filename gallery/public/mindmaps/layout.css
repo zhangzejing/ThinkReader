@@ -1,0 +1,11 @@
+:root { font-family:'Segoe UI Variable','Segoe UI',sans-serif;color:#29292b;background:#f7f7f5; }
+* { box-sizing:border-box; } html,body { margin:0;width:100%;height:100%;overflow:hidden; } #viewport { position:absolute;inset:0;overflow:hidden;touch-action:none;cursor:grab; } #viewport:active { cursor:grabbing; }
+#world { position:absolute;inset:0;transform-origin:0 0; } #edges { position:absolute;overflow:visible;width:1px;height:1px;pointer-events:none; }
+.mirror { position:absolute;inset:0;pointer-events:none; } .mirror .node { pointer-events:auto; } .edge-copy { position:absolute;overflow:visible;width:1px;height:1px;pointer-events:none; }
+.edge-copy > path { fill:none;stroke:#a49eac;stroke-width:1.5; }
+#edges > path { fill:none;stroke:#a49eac;stroke-width:1.5; } #arrow path { fill:#a49eac; }
+.node { position:absolute;padding:12px;overflow:visible;border:1px solid #d3d1d7;border-radius:6px;background:white;font-size:16px;line-height:1.62;overflow-wrap:anywhere;user-select:none; }
+.node:hover { border-color:#9876cc; } .color-purple { background:#f5f1fb; } .color-yellow { background:#faf8ed; } .color-green { background:#f0f7f3; } .color-red { background:#fcf2f2; }
+.node h1 { margin:0 0 .65em;padding-bottom:.3em;font-size:22.5px;line-height:1.25; } .node h2 { font-size:20px;margin:.8em 0 .45em;line-height:1.3; } .node h3 { font-size:14px;margin:.7em 0 .4em; }
+.node p { margin:0 0 1em; } .node :first-child { margin-top:0; } .node :last-child { margin-bottom:0; } .node img { max-width:100%; } .node ul,.node ol { padding-left:1.3em; } .node pre,.node code { white-space:pre-wrap;overflow-wrap:anywhere; } .node a { color:#7953b7; } .katex-display { max-width:100%;font-size:.9em; }
+:focus-visible { outline:2px solid #9876cc;outline-offset:-2px; }

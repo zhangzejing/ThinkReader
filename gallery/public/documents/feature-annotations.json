@@ -1,0 +1,184 @@
+[
+  {
+    "id": "ann-bbf6d495099c4e0d",
+    "title": "Background",
+    "body": "ENSO supplies most seasonal climate forecast skill, yet quantifying the sources of that skill remains a long-standing challenge.",
+    "rects": [
+      [
+        0.36508074701818993,
+        0.2355209037915399,
+        0.8899502193417432,
+        0.2469008341463662
+      ],
+      [
+        0.36508074701818993,
+        0.25195352322390896,
+        0.504463151146695,
+        0.26333345357873517
+      ],
+      [
+        0.5043734234909522,
+        0.25167414445177816,
+        0.5182526996586457,
+        0.2585021026646739
+      ],
+      [
+        0.5180711034696511,
+        0.2519585809707334,
+        0.8776456537622873,
+        0.26333851132555963
+      ],
+      [
+        0.3650815658434072,
+        0.2683912004031024,
+        0.5292591910122362,
+        0.2797711307579287
+      ]
+    ],
+    "color": "blue",
+    "source_excerpt": "The El Niño–Southern Oscillation (ENSO) provides most of the global seasonal climate forecast skill 1–3 , yet, quantifying the sources of skilful predictions is a long-standing challenge",
+    "source_paper": "paper-c28b83a93504457a"
+  },
+  {
+    "id": "ann-0a8a83d11ada4482",
+    "title": "Problem",
+    "body": "AI ENSO forecasts improve long-lead skill but still cannot link that skill to specific physical processes.",
+    "rects": [
+      [
+        0.5923919296116672,
+        0.2848288775822959,
+        0.901791606996482,
+        0.2962088079371221
+      ],
+      [
+        0.36507788092078297,
+        0.30126149701466487,
+        0.8689213081713343,
+        0.3126414273694912
+      ],
+      [
+        0.36507788092078297,
+        0.31769411644703394,
+        0.4223639129462637,
+        0.32907404680186025
+      ],
+      [
+        0.42229049135359065,
+        0.31742485316855196,
+        0.44242904893024415,
+        0.3242528113814477
+      ],
+      [
+        0.44220225803996804,
+        0.3177092896875071,
+        0.8642199439537277,
+        0.32908922004233343
+      ],
+      [
+        0.3650800517222263,
+        0.3341419091198762,
+        0.4566408262995094,
+        0.3455218394747024
+      ]
+    ],
+    "color": "blue",
+    "source_excerpt": "Artificial intelligence forecasts offer promising advancements but linking their skill to specific physical processes is not yet possible 8–10 , limiting our understanding of the dynamics underpinning the advancements.",
+    "source_paper": "paper-c28b83a93504457a"
+  },
+  {
+    "id": "ann-20289e78828d446d",
+    "title": "Results",
+    "body": "An XRO model yields skilful ENSO forecasts out to 16–18 months, better than climate models and comparable to top AI forecasts.",
+    "rects": [
+      [
+        0.4636839628054543,
+        0.3341419091198762,
+        0.9214878356918698,
+        0.3455218394747024
+      ],
+      [
+        0.3650800517222263,
+        0.35057452855224525,
+        0.9080439877787776,
+        0.36195445890707145
+      ],
+      [
+        0.3650800517222263,
+        0.3670071479846143,
+        0.8916579752516073,
+        0.3783870783394405
+      ],
+      [
+        0.3650800517222263,
+        0.3834397674169834,
+        0.4368693981780879,
+        0.3948196977718096
+      ]
+    ],
+    "color": "orange",
+    "source_excerpt": "Here we show that an extended nonlinear recharge oscillator (XRO) model shows skilful ENSO forecasts at lead times up to 16–18 months, better than global climate models and comparable to the most skilful artificial intelligence forecasts.",
+    "source_paper": "paper-c28b83a93504457a"
+  },
+  {
+    "id": "ann-c6159bc2d64940a7",
+    "title": "Method",
+    "body": "XRO combines core ENSO recharge-oscillator dynamics with seasonally modulated interactions among global ocean climate modes.",
+    "rects": [
+      [
+        0.444048332823674,
+        0.3834397674169834,
+        0.9393948233691187,
+        0.3948196977718096
+      ],
+      [
+        0.3650800517222263,
+        0.39987238684935245,
+        0.8941359854519171,
+        0.41125231720417865
+      ],
+      [
+        0.3650800517222263,
+        0.4163050062817214,
+        0.4116293795080917,
+        0.4276849366365477
+      ]
+    ],
+    "color": "green",
+    "source_excerpt": "The XRO parsimoniously incorporates the core ENSO dynamics and ENSO’s seasonally modulated interactions with other modes of variability in the global oceans.",
+    "source_paper": "paper-c28b83a93504457a"
+  },
+  {
+    "id": "ann-876c6d53c53b487e",
+    "title": "Contribution",
+    "body": "Long-range skill gains are traceable to other climate modes’ initial conditions, memory, and interactions with ENSO.",
+    "rects": [
+      [
+        0.418279283477501,
+        0.4163050062817214,
+        0.9303218891220197,
+        0.4276849366365477
+      ],
+      [
+        0.3650800517222263,
+        0.43273762571409047,
+        0.8712291321487837,
+        0.4441175560689167
+      ],
+      [
+        0.3650800517222263,
+        0.44917024514645953,
+        0.9275687124443107,
+        0.46055017550128574
+      ],
+      [
+        0.3650800517222263,
+        0.4656028645788286,
+        0.47205043831065746,
+        0.4769827949336548
+      ]
+    ],
+    "color": "orange",
+    "source_excerpt": "The intrinsic enhancement of ENSO’s long-range forecast skill is traceable to the initial conditions of other climate modes by means of their memory and interactions with ENSO and is quantifiable in terms of these modes’ contributions to ENSO amplitude.",
+    "source_paper": "paper-c28b83a93504457a"
+  }
+]

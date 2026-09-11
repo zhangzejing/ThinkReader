@@ -1,0 +1,48 @@
+{
+  "schema_version": "thinkreader-wiki-quality/1.0",
+  "_note": "Controlled vocabulary for /wiki proposals. The App validator and this resource must evolve together; command execution reads this file instead of hardcoding prose rules.",
+  "batch_schema_version": "abzu-wiki-proposal/1.0",
+  "requires_annotations": false,
+  "research_map": {
+    "min_groups": 1,
+    "preferred_group_count": 1,
+    "fallback_corresponding_author_count": 1,
+    "min_technical_method_nodes": 0,
+    "max_technical_method_nodes": 5,
+    "max_result_edge_chars": 24
+  },
+  "ops": [
+    "write-paper-page",
+    "write-private",
+    "upsert-common-node",
+    "add-backlink",
+    "relate-nodes"
+  ],
+  "node_types": [
+    "paper",
+    "paper-method",
+    "sub-result",
+    "concept",
+    "technique",
+    "method",
+    "result-topic",
+    "dataset",
+    "problem",
+    "group",
+    "open-question"
+  ],
+  "backlink_kinds": [
+    "opened-by",
+    "addressed-by",
+    "compared-with",
+    "followed-by",
+    "extends",
+    "referenced-by",
+    "uses",
+    "belongs-to",
+    "review"
+  ],
+  "cross_node_kinds": [
+    "strongly-related"
+  ]
+}

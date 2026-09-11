@@ -1,0 +1,13 @@
+html,body{margin:0;height:100%;overflow:hidden;font:13px/1.5 var(--font-sans);background:white}*{box-sizing:border-box}button{font:inherit;cursor:pointer}main{height:100%;display:grid;grid-template-columns:65% 35%}#paper{position:relative;overflow:auto;scrollbar-width:none;background:white;min-width:0;padding:0 12px}#paper::-webkit-scrollbar{display:none}#excerpt{position:relative}canvas{display:block;width:100%;height:auto}#agent{min-width:0;overflow:hidden;box-shadow:-3px 0 8px #0000000c;z-index:2}.real-agents{display:block;width:100%;height:100%;border:0}body[data-mode=multi-agent] main{display:block}body[data-mode=multi-agent] #paper{display:none}body[data-mode=multi-agent] #agent{height:100%}.inline-mark{opacity:0;transform:scaleX(0);transform-origin:left;transition:transform .8s,opacity .25s}.inline-mark.drawn{opacity:1;transform:scaleX(1)}.annotation-popover{position:fixed;width:220px;z-index:50}.annotation-popover[hidden]{display:none}.annotation-popover .pdf-mark-hover-card{position:relative;width:100%}:is(#replay,#pause){position:absolute;top:5px;right:5px;z-index:100;display:grid;place-items:center;width:26px;height:26px;border:1px solid var(--line-subtle);border-radius:5px;background:var(--surface-raised);color:var(--ink-secondary);box-shadow:0 1px 5px #0001}:is(#replay,#pause):hover{background:var(--surface-hover)}:is(#replay,#pause) svg{width:15px;height:15px}body[data-mode=conversation] #excerpt{margin-left:130px;width:calc(100% - 130px)}.fixed-card{position:absolute;left:8px;width:170px;z-index:3;cursor:grab}.fixed-card .pdf-mark-hover-card{position:relative;min-width:0;width:100%}.fixed-card:active{cursor:grabbing}#paper.is-drop-target{box-shadow:inset 0 0 0 2px var(--accent)}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.figure-anchor{position:absolute;border:1px solid color-mix(in srgb,var(--mark-current) 45%,transparent);background:transparent;cursor:pointer}.figure-anchor:is(:hover,.is-selected,.is-coupled){border-color:var(--mark-current);box-shadow:0 0 0 1px var(--mark-current)}.fixed-card.is-selected .pdf-mark-hover-card{border-color:var(--mark-current)}
+
+#pause{right:36px}#pause svg{fill:none;stroke:currentColor;stroke-width:1.8}
+
+.demo-cursor{position:fixed;top:0;left:0;width:22px;height:27px;z-index:250;pointer-events:none;filter:drop-shadow(0 2px 2px #0003)}.demo-cursor svg{width:100%;height:100%;fill:#28252f;stroke:white;stroke-width:1.5}
+
+
+
+.fixed-card.has-drag-ghost{opacity:0}
+
+.demo-interaction-shield{position:fixed;inset:0;z-index:90;background:transparent}.demo-interaction-shield[hidden]{display:none}

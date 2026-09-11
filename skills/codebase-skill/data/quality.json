@@ -1,0 +1,20 @@
+{
+  "schema_version": "thinkreader-codebase-quality/1.0",
+  "_note": "Machine-readable quality thresholds for /codebase proposals. The App validator reads this resource; prose explanation lives in rules.md.",
+  "min_file_chars": 300,
+  "requires_annotations": false,
+  "placeholder_markers": [
+    "_TBD",
+    "Replace this scaffold",
+    "Prepared by `/codebase"
+  ],
+  "spec_min_headings": 4,
+  "spec_min_figure_table_refs": 2,
+  "spec_min_metric_values_present": 2,
+  "repro_target_required_fields": [
+    "datasets",
+    "metrics",
+    "minimum_reproducible_experiment",
+    "acceptance_criteria"
+  ]
+}
