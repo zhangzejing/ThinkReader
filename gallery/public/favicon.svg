@@ -1,11 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="270 160 900 900">
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
   <title>ThinkReader</title>
   <defs>
-    <filter id="t-shadow" x="-20%" y="-15%" width="145%" height="140%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="4" dy="7" stdDeviation="5" flood-color="#000" flood-opacity=".18"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#fafafa"/>
+    </linearGradient>
+    <clipPath id="front-page">
+      <rect x="160" y="112" width="752" height="752" rx="144"/>
+    </clipPath>
+    <filter id="paper-shadow" x="-20%" y="-15%" width="140%" height="145%" color-interpolation-filters="sRGB">
+      <feDropShadow dy="12" stdDeviation="14" flood-color="#24202c" flood-opacity=".18"/>
     </filter>
   </defs>
-  <path fill="#8a5cf5" fill-opacity=".34" d="M423 209 L700 203 Q712 203 710 216 L670 991 Q670 1003 657 1004 L383 1011 Q371 1011 372 998 L411 221 Q411 209 423 209Z"/>
-  <path fill="#000" filter="url(#t-shadow)" d="M352 332 H772 L783 455 H756 C736 389 716 371 660 371 H613 V852 C613 881 626 890 669 896 V915 H445 V896 C491 890 505 880 505 852 V373 C425 363 387 374 365 455 H339Z"/>
-  <path fill="none" stroke="#000" stroke-width="38" stroke-linecap="round" stroke-linejoin="round" d="M890 558 L764 894 M754 623 C798 562 913 485 987 489 C1066 486 1049 551 1026 579 C989 628 911 684 831 731 C906 808 1006 869 1078 872"/>
+  <rect x="126" y="142" width="752" height="752" rx="144" transform="rotate(-6 502 518)" fill="#f0f0f0" filter="url(#paper-shadow)"/>
+  <rect x="160" y="112" width="752" height="752" rx="144" fill="url(#paper)" filter="url(#paper-shadow)"/>
+  <g clip-path="url(#front-page)">
+    <g fill="#c9c6d0">
+      <rect x="330" y="220" width="224" height="30" rx="15"/>
+      <rect x="672" y="220" width="70" height="30" rx="15"/>
+    </g>
+    <g fill="#dedce3">
+      <rect x="427" y="277" width="40" height="18" rx="9"/>
+      <rect x="543" y="277" width="102" height="18" rx="9"/>
+    </g>
+    <g fill="#e8e7eb">
+      <rect x="254" y="384" width="94" height="20" rx="8"/>
+      <rect x="254" y="464" width="32" height="20" rx="10"/>
+      <rect x="376" y="464" width="74" height="20" rx="10"/>
+      <rect x="254" y="544" width="196" height="20" rx="8"/>
+      <rect x="254" y="624" width="32" height="20" rx="10"/>
+      <rect x="254" y="704" width="150" height="20" rx="8"/>
+      <rect x="724" y="384" width="94" height="20" rx="8"/>
+      <rect x="622" y="464" width="66" height="20" rx="10"/>
+      <rect x="788" y="464" width="30" height="20" rx="10"/>
+      <rect x="622" y="544" width="196" height="20" rx="8"/>
+      <rect x="622" y="624" width="196" height="20" rx="8"/>
+      <rect x="668" y="704" width="32" height="20" rx="10"/>
+    </g>
+    <g fill="#8955d0" fill-opacity=".5">
+      <rect x="568" y="212" width="90" height="46" rx="12"/>
+      <rect x="481" y="269" width="48" height="34" rx="8"/>
+      <rect x="298" y="456" width="64" height="36" rx="10"/>
+      <rect x="300" y="616" width="150" height="36" rx="10"/>
+      <rect x="702" y="456" width="72" height="36" rx="10"/>
+      <rect x="714" y="696" width="104" height="36" rx="10"/>
+    </g>
+    <path fill="#292533" transform="translate(53.6 92) scale(.9)" d="M374 288H692L706 382H680C664 332 640 322 580 322H576V660C576 690 590 702 630 708V728H436V708C476 702 490 690 490 660V322H486C426 322 402 332 386 382H360Z"/>
+    <path fill="#dedde2" d="M800 118Q888 140 912 240H828Q800 240 800 212Z"/>
+  </g>
 </svg>
