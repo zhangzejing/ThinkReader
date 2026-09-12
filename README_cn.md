@@ -73,7 +73,6 @@ ThinkReader 0.7.5 提供 Windows x64 版本，当前二进制文件未签名。
 | `/slides` | 准备研究演示文稿 |
 | `/mindmap` | 在画布上组织概念与联系 |
 | `/codebase` | 建立研究复现的起始项目 |
-| `/translate` | 在保留原布局的前提下翻译论文 |
 | `/health-check` | 检查论文库记录与论文索引一致性 |
 
 论文命令默认处理当前论文。全文阅读命令保持全文范围，关注点用于调整侧重。生成的结论与代码仍需研究者核验。
@@ -97,7 +96,6 @@ ThinkReader 命令使用的系统 Skills 在 [`skills/`](skills/) 中。可复�
 | `slides-skill` | `/slides` |
 | `mindmap-skill` | `/mindmap` |
 | `codebase-skill` | `/codebase` |
-| `translate-skill` | `/translate` |
 | `app-control-skill` | `/health-check` |
 
 ## 保留自己的工作区
@@ -113,7 +111,7 @@ your Library/
 │   ├── intelligence/            语义索引、原文坐标与可复用图像
 │   │   └── document.md          可编辑的阅读副本
 │   └── notes.md                 按需创建的独立论文笔记
-├── output/                      summary/、report/、wiki/、codebase/、slides/、mindmap/、translate/
+├── output/                      summary/、report/、wiki/、codebase/、slides/、mindmap/
 ├── index.html                   Library 主页入口
 └── agents.html                  Agents 入口
 ```

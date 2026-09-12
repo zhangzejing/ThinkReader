@@ -75,7 +75,6 @@ No environment setup is required: open ThinkReader and the App guides you throug
 | `/slides` | Prepare a research presentation |
 | `/mindmap` | Organize ideas on a canvas |
 | `/codebase` | Create a reproduction starter project |
-| `/translate` | Translate a paper while keeping the original layout |
 | `/health-check` | Check Library records and paper-index consistency |
 
 Paper commands default to the current paper. Full-paper reading commands retain their whole-paper scope; a focus changes emphasis. Generated findings and code still need your review.
@@ -99,7 +98,6 @@ System Skills used by ThinkReader commands live in [`skills/`](skills/). Copy a 
 | `slides-skill` | `/slides` |
 | `mindmap-skill` | `/mindmap` |
 | `codebase-skill` | `/codebase` |
-| `translate-skill` | `/translate` |
 | `app-control-skill` | `/health-check` |
 
 ## Keep your workspace
@@ -115,7 +113,7 @@ Your Library/
 │   ├── intelligence/            Semantic indexes, source geometry and reusable figures
 │   │   └── document.md          Editable reading copy
 │   └── notes.md                 Independent paper notes, created when requested
-├── output/                      summary/, report/, wiki/, codebase/, slides/, mindmap/, translate/
+├── output/                      summary/, report/, wiki/, codebase/, slides/, mindmap/
 ├── index.html                   Library home entry
 └── agents.html                  Agents entry
 ```
