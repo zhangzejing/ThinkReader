@@ -45,12 +45,12 @@ flowchart LR
 
 ### Download the app
 
-ThinkReader 0.8.5 is available for Windows x64. The binaries are unsigned.
+ThinkReader 0.8.6 is available for Windows x64. The binaries are unsigned.
 
-- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.8.5/ThinkReader-Setup-0.8.5-win_x64.exe)
-- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.8.5/ThinkReader-0.8.5-win_x64.exe)
-- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.8.5/ThinkReader-0.8.5-win_x64.zip)
-- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.8.5)
+- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.8.6/ThinkReader-Setup-0.8.6-win_x64.exe)
+- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.8.6/ThinkReader-0.8.6-win_x64.exe)
+- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.8.6/ThinkReader-0.8.6-win_x64.zip)
+- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.8.6)
 
 ### First use
 
