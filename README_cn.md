@@ -43,18 +43,18 @@ flowchart LR
 
 ### 下载 App
 
-ThinkReader 0.8.7 提供 Windows x64 版本，当前二进制文件未签名。
+ThinkReader 0.9.3 提供 Windows x64 版本，当前二进制文件未签名。
 
-- [Windows 安装版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.8.7/ThinkReader-Setup-0.8.7-win_x64.exe)
-- [Windows 便携版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.8.7/ThinkReader-0.8.7-win_x64.exe)
-- [Windows ZIP 压缩包](https://github.com/zhangzejing/ThinkReader/releases/download/v0.8.7/ThinkReader-0.8.7-win_x64.zip)
-- [发布说明](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.8.7)
+- [Windows 安装版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.3/ThinkReader-Setup-0.9.3-win_x64.exe)
+- [Windows 便携版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.3/ThinkReader-0.9.3-win_x64.exe)
+- [Windows ZIP 压缩包](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.3/ThinkReader-0.9.3-win_x64.zip)
+- [发布说明](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.3)
 
 从 0.8.7 起，App 启动时检查更新；发现新版后，“帮助与更新”会显示与 Agents、库主页相同主题颜色的下载图标，悬停提示“有可用的更新”。点击后可下载并安装更新。0.8.6 及更早版本需先手动升级一次。
 
 ### 第一次使用
 
-无需任何环境配置：打开 ThinkReader，App 会引导你设置好一切。
+无需手动运行命令。首次启动时可选择本地解析（下载环境与模型）或 MinerU API 解析（安装轻量 CLI 并填写 API Token），App 会逐步引导。
 
 1. 新建一个 ThinkReader 论文库，App 会自动创建其中的文件目录。
 2. 将论文 PDF 放入刚才论文库下的 `RAW/` 文件夹，或从App库主页导入。
