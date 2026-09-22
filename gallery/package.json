@@ -43,5 +43,16 @@
     "vite": "8.0.13",
     "wrangler": "4.92.0"
   },
-  "type": "module"
+  "type": "module",
+  "overrides": {
+    "@dotenvx/dotenvx": {
+      "undici": "8.9.0"
+    },
+    "miniflare": {
+      "undici": "8.9.0"
+    },
+    "shadcn": {
+      "undici": "8.9.0"
+    }
+  }
 }
