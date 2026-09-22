@@ -45,12 +45,12 @@ flowchart LR
 
 ### Download the app
 
-ThinkReader 0.9.3 is available for Windows x64. The binaries are unsigned.
+ThinkReader 0.9.4 is available for Windows x64. The binaries are unsigned.
 
-- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.3/ThinkReader-Setup-0.9.3-win_x64.exe)
-- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.3/ThinkReader-0.9.3-win_x64.exe)
-- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.3/ThinkReader-0.9.3-win_x64.zip)
-- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.3)
+- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.4/ThinkReader-Setup-0.9.4-win_x64.exe)
+- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.4/ThinkReader-0.9.4-win_x64.exe)
+- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.4/ThinkReader-0.9.4-win_x64.zip)
+- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.4)
 
 From 0.8.7, Help & updates checks on startup and shows a download icon in the same theme color as Agents and Library Home when an update is available. Open it to download and install the update. Versions through 0.8.6 need one manual upgrade first.
 
