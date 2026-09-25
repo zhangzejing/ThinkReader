@@ -46,6 +46,9 @@ abstract does not state.
 - State information directly. Delete “本文提出/作者介绍/这一段说明/值得注意”
   whenever the remaining sentence still makes sense.
 - Preserve decisive model names, datasets, metrics, numbers and baselines.
+- Keep results attached to their actual metric, setting and comparison: steps to
+  reach a baseline are not the steps to reach maximum accuracy, and training cost
+  is not model quality. Distinguish theoretical bounds from empirical experiments.
 - Preserve the predicate of a technical claim. In particular, keep optimization
   direction (`maximize`, `minimize`), objective (`log-likelihood`, loss, bound),
   conditioning relation (`given`, `conditioned on`), polarity and inequality.

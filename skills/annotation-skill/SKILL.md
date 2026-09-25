@@ -23,14 +23,16 @@ selected command's `name` and `resource="templates.md"`; it need not be reloaded
 if already in context. Load cues only when useful as candidate signals.
 
 Only explicit `/flash-annotation` or a clear request for flash/lightweight
-annotation selects [prompts/flash.md](prompts/flash.md) instead of these standards.
+annotation selects [prompts/flash.md](prompts/flash.md) instead of these standards,
+including its single-pass whole-paper reading and batch-write order.
 Ordinary natural-language annotation requests keep `/annotation` quality.
 
 All modes use [prompts/native.md](prompts/native.md) and actual MCP schemas.
 Old selector/proposal protocol references do not govern native tool calls.
-Default to full-paper reading followed by section/group batches as described
-there; use the user's request to select annotation scope and emphasis, not to
-truncate the full-paper context. Reuse reading context already available.
+For non-flash modes, build a global overview, read the first complete in-scope section, and save a small
+first batch as described there. Continue through the full paper with section/group
+batches and a final consistency check. Use the user's request to select write scope
+and emphasis, not to truncate the full-paper context. Reuse context already read.
 Preserve required coverage, final consistency checks and annotation standards.
 
 User scope, emphasis and language override defaults.

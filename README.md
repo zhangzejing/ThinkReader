@@ -45,12 +45,12 @@ flowchart LR
 
 ### Download the app
 
-ThinkReader 0.9.43 is available for Windows x64. The binaries are unsigned.
+ThinkReader 0.9.50 is available for Windows x64. The binaries are unsigned.
 
-- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.43/ThinkReader-Setup-0.9.43-win_x64.exe)
-- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.43/ThinkReader-0.9.43-win_x64.exe)
-- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.43/ThinkReader-0.9.43-win_x64.zip)
-- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.43)
+- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.50/ThinkReader-Setup-0.9.50-win_x64.exe)
+- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.50/ThinkReader-0.9.50-win_x64.exe)
+- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.50/ThinkReader-0.9.50-win_x64.zip)
+- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.50)
 
 From 0.8.7, Help & updates checks on startup and shows a download icon in the same theme color as Agents and Library Home when an update is available. Open it to download and install the update. Versions through 0.8.6 need one manual upgrade first.
 
@@ -72,6 +72,7 @@ No terminal setup is required. On first launch, choose on-device parsing (local 
 | `/annotation`, `/deep-annotation` | Annotate the paper at different depths |
 | `/flash-annotation` | Lightweight key-phrase annotation |
 | `/review`, `/deep-review` | Examine contributions, evidence, assumptions, and limitations |
+| `/audit` | Reply with an independent perspective on annotations; check and refine outputs |
 | `/summary` | Create a concise summary for side-by-side reading |
 | `/report` | Develop a longer research report |
 | `/wiki` | Connect findings across papers |
@@ -95,6 +96,7 @@ System Skills used by ThinkReader commands live in [`skills/`](skills/). Copy a 
 | Skill | Used by |
 | --- | --- |
 | `annotation-skill` | `/browse`, `/annotation`, `/flash-annotation`, `/deep-annotation` |
+| `audit-skill` | `/audit` |
 | `summary-skill` | `/summary`, `/review`, `/deep-review` |
 | `report-skill` | `/report` |
 | `wiki-skill` | `/wiki` |

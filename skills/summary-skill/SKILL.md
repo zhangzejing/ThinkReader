@@ -1,5 +1,5 @@
 ---
-name: abzu-summary
+name: thinkreader-summary
 description: Create a fixed four-part paper summary whose claims link back to precise PDF evidence. Use only for /summary.
 ---
 
@@ -7,6 +7,12 @@ description: Create a fixed four-part paper summary whose claims link back to pr
 
 Create one concise Markdown document for the whole paper. Read the PaperMap
 first, then the complete EvidenceIndex by section. Use paper evidence only.
+The reading surface is a narrow sidebar beside the PDF: default to at most 1000
+body units (Han characters or English words), excluding headings and evidence
+links. Long papers may extend slightly to about 1200. Explicit user length
+instructions override this target; short papers need less. This is writing
+guidance: do not count, rewrite, compress, truncate or reject a completed draft
+because of its length.
 
 Always read [rules.md](rules.md) and [writer.md](writer.md). The four required
 sections and their order are immutable. The App's `paper_id` and EvidenceUnit

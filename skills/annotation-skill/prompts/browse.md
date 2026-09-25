@@ -37,6 +37,9 @@ accounting and not a keyword index.
   Chinese characters or a short phrase in the selected language. A hint names one list item, step, variable role,
   comparison or consequence; it does not paraphrase the whole source or repeat
   the title. Avoid lead-ins such as “本段介绍了”.
+- A hint may omit its source target and remain plain supporting text. Do not force
+  a target merely to make it interactive. When bound, use a distinct local passage
+  that actually supports that hint, not the whole parent block.
 - A hint may return consecutive selector refs spanning adjacent EvidenceUnits.
   The App copies the selected source and creates local anchors; the LLM must not
   copy or concatenate source text. Unselected connective text need not be

@@ -82,8 +82,7 @@ the visual shows; the body normally follows these three moves:
   diagram when it is not experimental proof. Do not invent a section or link.
 - Normally use one short bullet per move. Split a dense first bullet when
   needed for legibility; omit unavailable information rather than padding.
-- Only when its source language differs from the target language, translate the complete caption
-  into a separate clue bound to the caption, following the shared caption rule below.
+- Keep the original caption. A translation clue is optional and only created when the user requests it.
 
 ## Algorithm — explain how the procedure runs
 
@@ -102,7 +101,7 @@ translate the pseudocode line by line.
 Keep only necessary inputs and steps. Preserve sampling, dependencies, update
 order, and stated stopping conditions; do not invent convergence guarantees or
 add a complexity discussion unless essential to understanding the procedure.
-Translate the full algorithm caption into a clue only when its language differs from the target. If no caption
+Keep the original algorithm caption; translate it only on explicit request. If no caption
 exists, do not manufacture one or treat the whole pseudocode as its caption.
 
 ## Theory derivation — walk through A → B → C → D
@@ -153,9 +152,10 @@ ordinary arithmetic operator. Use paper-specific meanings, preserve distinct
 roles, and state “原文未定义” when a necessary symbol really lacks a definition
 rather than guessing. Avoid duplicating a full glossary in nearby cards.
 
-## Full caption translation → clue (figures/tables and algorithms)
+## Optional caption translation → clue (only on user request)
 
-First compare the caption's language with the current target language. If they match, skip translation
+Reading and explaining figures/tables and algorithms does not require translating their captions.
+Only when the user explicitly asks for caption translation, compare its language with the target. If they match, skip translation
 and omit the translation clue; still write any useful analytical figure/algorithm card. For mixed-language
 captions, translate only the parts that need it. Otherwise translate the whole caption faithfully, including its number, panel labels,
 qualifications, baselines, units, and reported values. Keep official names and

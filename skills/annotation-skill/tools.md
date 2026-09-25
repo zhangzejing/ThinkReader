@@ -48,10 +48,12 @@ EvidenceUnits into one semantic block. Shared special cards use plain Markdown
 and no hints. Only ordinary browse paragraph cards may bind hints to ordered
 selector refs. The tool creates the group anchor and copies selected hint text
 without expanding selections merely to cover connective text.
+Hints may omit selectors and remain plain supporting text. Missing or unmatched
+Hint targets do not invalidate the card; they never fall back to the whole block.
 
 ## `clue.create-from-evidence`
 
-For figures/tables and algorithms, return a `clues` request with the caption's
+Only if the user requests caption translation, return a `clues` request with the caption's
 `evidence_id`, faithful full translation in `body_md`, and optional color.
 The App exposes `caption_segments` copied from actual PDF text items; use these
 as the translation source. With no `selector_refs`, it selects all of them.

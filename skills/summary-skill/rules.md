@@ -20,7 +20,10 @@ the summary's scope, quality or length target.
   problem, prior route and unresolved bottleneck.
 - 核心创新点: numbered innovations. For each, state what it is, what it builds
   on, and the decisive idea/formula when supported.
-- 实验结果: numbered results preserving dataset, metric, number and baseline.
+- 实验结果: group by the actual experiments performed, then give each experiment's
+  setting and findings together. Use the paper's groups (e.g. main comparison,
+  ablation, robustness, efficiency) only when those experiments actually exist.
+  Preserve dataset, metric, number, units, baseline and comparison conditions.
   Never turn qualitative evidence into an invented number.
 - 主要结论: one compact synthesis, followed by the strongest original evidence.
 
@@ -41,6 +44,22 @@ Every substantive bullet or paragraph contains at least one inline evidence
 link. Prefer several precise links over one broad link when claims rely on
 different sections. Do not expose internal workspace paths or raw IDs as
 visible labels.
+
+## Narrow-pane reading budget
+
+Aim for at most 1000 body units: one Han character or one English word,
+excluding headings and evidence links. Long papers may extend slightly to about
+1200; shorter papers should be much shorter. Explicit user length/detail
+requirements take priority. Both review depths use this same writing target.
+Do not count or compress a completed draft, request a rewrite, truncate content
+or report an error because of length. Preserve the full evidence-validated draft.
+
+Use short paragraphs and compact lists; several background points should be
+separate bullets. Fit approximately 360px beside the PDF. For several comparable
+experimental results, use a 2–3-column table with short cells and a precise
+evidence link in each row. Keep setup, metric/unit and baseline attached to the
+number. Split by experiment or use bullets when a table would become wide.
+Do not repeat table values in prose or add an exhaustive link appendix.
 
 ## Output language and document type
 
