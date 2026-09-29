@@ -10,9 +10,9 @@
 
 ## Content
 
-For a survey, organize the evidence into scope/background, taxonomy/research
+For a survey, map the four memo arrays to scope/background, taxonomy/research
 questions/routes, representative studies/comparisons, and consensus/disputes/gaps.
-Use the survey headings in the App's Summary writer rule. Do not force original experiments or claim
+Use the survey headings in writer.md. Do not force original experiments or claim
 that a surveyed method was invented by this survey. Neither review depth changes
 the summary's scope, quality or length target.
 

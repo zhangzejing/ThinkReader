@@ -14,25 +14,17 @@ instructions override this target; short papers need less. This is writing
 guidance: do not count, rewrite, compress, truncate or reject a completed draft
 because of its length.
 
-Always read [rules.md](rules.md) and the App's Summary writer rule supplied with
-this Skill. For research/survey, follow the four sections and their order for the
-inferred type and selected language; other documents use a useful source-based structure.
-The App's `paper_id` and EvidenceUnit
+Always read [rules.md](rules.md) and [writer.md](writer.md). The four required
+sections and their order are immutable. The App's `paper_id` and EvidenceUnit
 IDs are link targets, not prose.
-
-Run in the same native conversation as reading and annotations. Infer the document
-type from its actual evidence; do not ask for a separate JSON classification.
-Reuse complete evidence already read in this task; use `thinkreader_context` for
-the outline and missing evidence pages. Follow `next_offset` without clipping text.
-Save with `thinkreader_summary`, not direct file writes or JSON in the final reply.
 
 The output is a research aid: synthesize relationships across sections while
 keeping every important claim one click away from the original PDF location.
 Existing annotations are optional and never a prerequisite. The semantic pass does not
 edit them. After commit, the App first appends the `summary` tag to an existing annotation
 covering cited evidence, preserving its content, author, marks, hints, replies and layout.
-Keep uncovered evidence in the summary citations; never create PDF cards for evidence bookkeeping.
-Repeated runs must not multiply cards or tags; matching and tag writes are tool work, not extra LLM output.
+Only uncovered evidence gets a tiny `### summary` work-trace card. Repeated runs must not
+multiply cards or tags; matching and tag writes are tool work, not extra LLM output.
 
 ## Output language and document type
 

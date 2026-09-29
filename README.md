@@ -45,12 +45,12 @@ flowchart LR
 
 ### Download the app
 
-ThinkReader 0.9.55 is available for Windows x64. The binaries are unsigned.
+ThinkReader 0.9.54 is available for Windows x64. The binaries are unsigned.
 
-- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.55/ThinkReader-Setup-0.9.55-win_x64.exe)
-- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.55/ThinkReader-0.9.55-win_x64.exe)
-- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.55/ThinkReader-0.9.55-win_x64.zip)
-- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.55)
+- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.54/ThinkReader-Setup-0.9.54-win_x64.exe)
+- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.54/ThinkReader-0.9.54-win_x64.exe)
+- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.54/ThinkReader-0.9.54-win_x64.zip)
+- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.54)
 
 From 0.8.7, Help & updates checks on startup and shows a download icon in the same theme color as Agents and Library Home when an update is available. Open it to download and install the update. Versions through 0.8.6 need one manual upgrade first.
 
@@ -71,7 +71,7 @@ No terminal setup is required. On first launch, choose on-device parsing (local 
 | `/browse` | Organize the paper's main thread into reading cards |
 | `/annotation`, `/deep-annotation` | Annotate the paper at different depths |
 | `/flash-annotation` | Lightweight key-phrase annotation |
-| `/review`, `/deep-review` | Browse, annotate (or deeply annotate), then save a concise evidence-linked summary |
+| `/review`, `/deep-review` | Examine contributions, evidence, assumptions, and limitations |
 | `/audit` | Reply with an independent perspective on annotations; check and refine outputs |
 | `/summary` | Create a concise summary for side-by-side reading |
 | `/report` | Develop a longer research report |
@@ -81,7 +81,7 @@ No terminal setup is required. On first launch, choose on-device parsing (local 
 | `/codebase` | Create a reproduction starter project |
 | `/health-check` | Check Library records and paper-index consistency |
 
-Paper commands default to the focused paper when each task starts. Explicit paths or paper IDs override that default; the Agent resolves natural-language titles and asks when the target is ambiguous. A running task keeps its selected paper. Full-paper reading commands retain their whole-paper scope; a focus changes emphasis. Generated findings and code still need your review.
+Paper commands default to the current paper. Full-paper reading commands retain their whole-paper scope; a focus changes emphasis. Generated findings and code still need your review.
 
 ## Explore the gallery
 
