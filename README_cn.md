@@ -43,14 +43,16 @@ flowchart LR
 
 ### 下载 App
 
-ThinkReader 0.9.55 提供 Windows x64 版本，当前二进制文件未签名。
+ThinkReader 0.9.56 提供 Windows x64 版本，当前二进制文件未签名。
 
-- [Windows 安装版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.55/ThinkReader-Setup-0.9.55-win_x64.exe)
-- [Windows 便携版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.55/ThinkReader-0.9.55-win_x64.exe)
-- [Windows ZIP 压缩包](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.55/ThinkReader-0.9.55-win_x64.zip)
-- [发布说明](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.55)
+- [Windows 安装版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.56/ThinkReader-Setup-0.9.56-win_x64.exe)
+- [Windows 便携版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.56/ThinkReader-0.9.56-win_x64.exe)
+- [Windows ZIP 压缩包](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.56/ThinkReader-0.9.56-win_x64.zip)
+- [发布说明](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.56)
 
 从 0.8.7 起，App 启动时检查更新；发现新版后，“帮助与更新”会显示与 Agents、库主页相同主题颜色的下载图标，悬停提示“有可用的更新”。点击后可下载并安装更新。0.8.6 及更早版本需先手动升级一次。
+
+如果旧版本点击“安装并重启”后版本号仍未变化，请使用上方 0.9.56 安装版覆盖安装一次。此后 App 内更新会在原目录静默完成。
 
 ### 第一次使用
 
