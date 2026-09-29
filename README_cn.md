@@ -43,12 +43,12 @@ flowchart LR
 
 ### 下载 App
 
-ThinkReader 0.9.54 提供 Windows x64 版本，当前二进制文件未签名。
+ThinkReader 0.9.55 提供 Windows x64 版本，当前二进制文件未签名。
 
-- [Windows 安装版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.54/ThinkReader-Setup-0.9.54-win_x64.exe)
-- [Windows 便携版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.54/ThinkReader-0.9.54-win_x64.exe)
-- [Windows ZIP 压缩包](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.54/ThinkReader-0.9.54-win_x64.zip)
-- [发布说明](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.54)
+- [Windows 安装版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.55/ThinkReader-Setup-0.9.55-win_x64.exe)
+- [Windows 便携版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.55/ThinkReader-0.9.55-win_x64.exe)
+- [Windows ZIP 压缩包](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.55/ThinkReader-0.9.55-win_x64.zip)
+- [发布说明](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.55)
 
 从 0.8.7 起，App 启动时检查更新；发现新版后，“帮助与更新”会显示与 Agents、库主页相同主题颜色的下载图标，悬停提示“有可用的更新”。点击后可下载并安装更新。0.8.6 及更早版本需先手动升级一次。
 
@@ -69,7 +69,7 @@ ThinkReader 0.9.54 提供 Windows x64 版本，当前二进制文件未签名。
 | `/browse` | 将论文主线组织为阅读卡片 |
 | `/annotation`、`/deep-annotation` | 以不同深度批注论文 |
 | `/flash-annotation` | 轻量关键短语批注 |
-| `/review`、`/deep-review` | 审视贡献、证据、假设与局限 |
+| `/review`、`/deep-review` | 依次浏览、批注（或深度批注），并保存带证据链接的精炼总结 |
 | `/audit` | 在已有批注上回复独立观点，并核对、微调研究产出 |
 | `/summary` | 生成适合并排阅读的精炼总结 |
 | `/report` | 整理较完整的研究报告 |
@@ -79,7 +79,7 @@ ThinkReader 0.9.54 提供 Windows x64 版本，当前二进制文件未签名。
 | `/codebase` | 建立研究复现的起始项目 |
 | `/health-check` | 检查论文库记录与论文索引一致性 |
 
-论文命令默认处理当前论文。全文阅读命令保持全文范围，关注点用于调整侧重。生成的结论与代码仍需研究者核验。
+论文命令默认处理任务开始时聚焦的论文。显式路径或论文 ID 优先；自然语言标题由 Agent 判断，目标不明确时会询问。运行中的任务保持已选论文。全文阅读命令保持全文范围，关注点用于调整侧重。生成的结论与代码仍需研究者核验。
 
 ## 浏览画廊
 
