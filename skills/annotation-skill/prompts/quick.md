@@ -7,6 +7,11 @@ the whole-paper map and each complete section.
 
 - Prefer the few passages that unlock the section: its main move, strongest
   evidence, explicit assumption, important qualification or stated limit.
+- A critical question is useful when it helps the reader judge a specific
+  claim: distinguish what the comparison establishes from what it leaves open,
+  and name the relevant assumption or missing check. Attribute the author's
+  claim and your inference separately. Do not invent criticism, force a negative
+  card per section, or delay supported cards while searching for objections.
 - Use deterministic cue/search results to find candidates, but accept a
   candidate only after reading its full section.
 - Use phrase marks by default. Area cards are reserved for method blocks,
@@ -28,7 +33,8 @@ the whole-paper map and each complete section.
   Their lists are ordinary Markdown in `body_md`, never hints.
 
 Quick means fewer model-selected actions, not fragmentary reading. Every
-section remains in scope.
+section remains in scope. Unlike browse's rapid guide, annotation may take more
+time for consequential evidence checks; continue saving valid work throughout.
 
 ## Output language and document type
 

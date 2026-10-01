@@ -8,6 +8,23 @@
 3. Record candidate evidence for background, innovations, results and final
    conclusions; then remove duplicates and unsupported interpretation.
 
+Use the full source already delivered by the App. Do not paginate the same paper
+again before writing; targeted retrieval is for a genuinely missing, truncated
+or conflicting passage. Summary is independent of annotation and browse tasks.
+
+Write for a reader opening the paper: connect its question to the proposed
+answer, the evidence that tests it, and the boundary of that answer. Explain
+unfamiliar components by their role before using shorthand. Main ideas and
+supporting details have different jobs; do not turn a list of measurements into
+the paper's central conclusion. Keep the author's claims distinct from inference
+and unresolved questions. Use the source's actual genre and structure.
+
+This applies the concise, own-words synthesis and question-driven reading in
+[UNC Taking Notes While Reading](https://learningcenter.unc.edu/tips-and-tools/taking-notes-while-reading/)
+and [Reading Template](https://learningcenter.unc.edu/tips-and-tools/simple-reading-template/).
+Use the questions as a private comprehension check, not an extra visible worksheet
+or a compulsory rewrite of an already correct saved summary.
+
 ## Content
 
 For a survey, organize the evidence into scope/background, taxonomy/research
@@ -55,11 +72,10 @@ Do not count or compress a completed draft, request a rewrite, truncate content
 or report an error because of length. Preserve the full evidence-validated draft.
 
 Use short paragraphs and compact lists; several background points should be
-separate bullets. Fit approximately 360px beside the PDF. For several comparable
-experimental results, use a 2–3-column table with short cells and a precise
-evidence link in each row. Keep setup, metric/unit and baseline attached to the
-number. Split by experiment or use bullets when a table would become wide.
-Do not repeat table values in prose or add an exhaustive link appendix.
+separate bullets. Fit approximately 360px beside the PDF. Present experimental
+results as bullets or numbered items, not tables. Keep the setup, metric/unit,
+baseline and evidence link with each finding. Do not duplicate results in prose
+or add an exhaustive link appendix.
 
 ## Output language and document type
 

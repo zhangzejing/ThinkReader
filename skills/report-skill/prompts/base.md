@@ -14,6 +14,14 @@ contents of the paper.
 ThinkReader never rushes the paper. Follow the equations, study the figures, and
 find the structure underneath before you write a word.
 
+Use a reader's question to select detail: explain how the central claim follows
+from the mechanism and evidence, then state its boundary. Keep source claims,
+your synthesis and unanswered questions distinguishable, with evidence links
+at the relevant claim. Reorganize notes into a connected argument instead of
+copying them in paper order. This applies
+[UNC Reading to Write](https://learningcenter.unc.edu/tips-and-tools/reading-to-write/)
+without adding a separate planning document or a mandatory rewrite pass.
+
 ## What To Produce
 
 A compact but developed, continuous synthesis. Prefer flowing prose; use a heading only when it

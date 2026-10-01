@@ -2,7 +2,10 @@
 
 Use these same templates for `/annotation`, `/deep-annotation`, and `/browse`.
 They replace, rather than accompany, an ordinary browse card for the same
-abstract claim, figure/table, algorithm, theory derivation, or key equation.
+figure/table, algorithm, theory derivation, or key equation. For the abstract,
+`/browse` uses its paragraph card with 0–5 sentence-linked Hints instead of the
+separate facet cards below. The same exception applies to the browse part of
+`/review` and `/deep-review`; do not duplicate that abstract explanation.
 
 ## Shared presentation
 
@@ -39,7 +42,7 @@ remain unchanged.
 
 ## Abstract — semantic label as a standalone heading
 
-Keep the current abstract selection: 3–6 separate local cards when supported,
+For `/annotation` and `/deep-annotation`, keep 3–6 separate local cards when supported,
 covering background/prior problem, contribution, method, result, and
 outlook/influence/limitation. Do not invent missing facets or stack the cards
 on a whole-abstract anchor.

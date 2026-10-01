@@ -19,7 +19,7 @@
 有独立解释的子图批注和用户修改仍保留，不因位置邻近就合并不同论点。
 结构浏览与精读解释可以互补，不因位置重叠直接合并。用户正文、回复、布局和历史来源不得擅自改写。
 
-/review = browse → annotation → summary；/deep-review = browse → deep-annotation → summary。
+/review 在同一次阅读中结合 browse、annotation 和 summary；/deep-review 将 annotation 替换为 deep-annotation。批注持续保存，全文读完后用原有 summary 标准写小结，不再串行重启三个阶段。
 两者固定阅读全文；focus 只调整强调重点。两种 review 的 summary 使用相同标准、结构、篇幅与证据要求，
 不因 deep 模式增加 summary 深度或扩成长报告。summary 直接核对全文，不仅总结已有批注。
 

@@ -7,6 +7,49 @@ architecture at a glance, not reread the paper inside AI comments. Internal
 reasoning may be detailed, but visible prose must be compressed to the decisive
 fact.
 
+## Support an actual reading question
+
+Before selecting a mark, identify the passage's job in the argument and the
+reader's likely obstacle. Explain that obstacle in your own words: what a concept
+means here, why a design is needed, what evidence establishes, or where a claim
+stops. A label or near-verbatim paraphrase without that relationship adds little.
+Separate a supported answer from a useful unanswered question; do not manufacture
+questions, disagreements or background facts to fill a card.
+
+The commands serve different reading needs. Browse connects paragraph main ideas;
+annotation marks the few passages that unlock understanding; deep annotation
+examines decisive assumptions and reasoning steps. Review combines those roles
+without duplicate explanations. A summary reconstructs the argument in its own
+short document, with direct evidence links and no dependency on existing cards.
+
+For unfamiliar terms, explain their role using the paper's own definitions and
+examples before shorthand. For arguments in social science or humanities, retain
+the author's thesis, context and evidence type; do not force a model/benchmark
+template or treat an interpretation as an experimental measurement.
+
+For figures, identify axes, units, legend/baseline and the question the graphic
+answers; for diagrams follow arrows and named components. Tie the observed trend
+or mechanism to its role in the paper. Do not treat the caption as visual proof
+or repeat every plotted number. Inspect relevant visuals in passage order while
+continuing to save already supported text cards.
+
+For mathematics, distinguish definitions, assumptions, transformations and
+conclusions. Explain the decisive step and why it is valid, using an example only
+when the source supports it. Name missing justification as a gap; do not present
+a conjectured derivation as the author's proof. Preserve existing formula and
+derivation card formats; put relationships in the appropriate method/derivation
+card rather than turning each equation into another annotation.
+
+These decisions draw on UNC Learning Center's
+[Annotating Texts](https://learningcenter.unc.edu/tips-and-tools/annotating-texts/),
+[Journal Articles](https://learningcenter.unc.edu/tips-and-tools/reading-journal-articles/),
+[Highlighting](https://learningcenter.unc.edu/tips-and-tools/using-highlighters/),
+[Diagrams and Graphs](https://learningcenter.unc.edu/tips-and-tools/understanding-diagrams-and-graphs/),
+[Math Reading](https://learningcenter.unc.edu/tips-and-tools/readingmathtexts/), and
+[Social Sciences](https://learningcenter.unc.edu/tips-and-tools/reading-in-the-social-sciences/).
+They inform reading choices, not extra mandatory planning passes or a change to
+the Agent Profile's reasoning settings.
+
 ## Preserve whole-paper understanding
 
 Before section work, read paper identity, abstract, section tree, main
@@ -15,14 +58,17 @@ Maintain a compact global map of the problem, claimed contribution, technical
 route, evidence chain, results, assumptions and limitations. Every section
 decision must remain consistent with this map.
 
-## Read a complete section before choosing spans
+## Use the complete section context while choosing spans
 
 For the current section:
 
-1. Read every EvidenceUnit in order, including equations, captions and tables.
+1. Understand every EvidenceUnit in the supplied section context, including
+   equations, captions and tables; do not retrieve text already delivered.
 2. Follow structural relations and neighboring transitions when present.
 3. Identify the section's role and how its premises support later claims.
-4. Only after the full section is understood, choose evidence worth marking.
+4. Choose evidence worth marking in that context, then save each ready card.
+   Understanding a section does not require drafting all its cards together or
+   inspecting unrelated figures before saving a supported text explanation.
 
 A cue word is never sufficient. When adjacent sentences form one claim, select
 the shortest contiguous span preserving their relationship. If phrase geometry
@@ -43,8 +89,8 @@ abstract does not state.
   title and one compact conclusion in the selected language, normally 15–24 characters. Never
   delete an indispensable operator, condition, negation, unit, metric or
   technical term merely to meet a length target; semantic equivalence wins.
-- State information directly. Delete “本文提出/作者介绍/这一段说明/值得注意”
-  whenever the remaining sentence still makes sense.
+- State information directly. Remove empty “这一段说明/值得注意” lead-ins, but
+  retain the named author/model as subject when it connects the argument.
 - Preserve decisive model names, datasets, metrics, numbers and baselines.
 - Keep results attached to their actual metric, setting and comparison: steps to
   reach a baseline are not the steps to reach maximum accuracy, and training cost
@@ -64,9 +110,9 @@ abstract does not state.
   predicate, condition, comparison or mathematical meaning.
 - Depth comes from evidence selection and cross-section understanding, not
   longer comments.
-- `/annotation` and `/deep-annotation` are sparse. `/browse` selects the natural
-  blocks needed to reconstruct the paper's argument; it does not account for
-  every EvidenceUnit or duplicate a shared special card.
+- `/annotation` and `/deep-annotation` are sparse. `/browse` explains every
+  paragraph target in scope, grouping coherent moves and reusing special cards;
+  it does not create cards for page numbers or reference entries.
 
 ## Mathematics, algorithms and visuals
 

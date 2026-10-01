@@ -14,6 +14,15 @@ ThinkReader never rushes the paper. Read the front matter, structure and any ann
 you decide which nodes are worth creating. A wiki of shallow stubs is noise; a
 few well-chosen, well-linked nodes are the asset.
 
+Explain a concept in your own words through its role and a source-supported
+example when available. A relationship must say what connects the ideas, not
+merely that both occur in a paper. Separate established facts, this paper's
+contribution and unresolved questions. This applies the organization of facts,
+examples, significance and relationships in
+[UNC Simple Reading Template](https://learningcenter.unc.edu/tips-and-tools/simple-reading-template/)
+and [Taking Notes While Reading](https://learningcenter.unc.edu/tips-and-tools/taking-notes-while-reading/).
+It does not change the App's node/edge contract or require extra nodes.
+
 ## The Paper Page (`write-paper-page`)
 
 The paper page is the hub. It should let a reader who has never opened the PDF

@@ -36,7 +36,9 @@ a source paraphrase, advice, definition, or second claim. Use `question` only
 for a real unresolved issue; otherwise use `evidence`.
 
 Abstract facets, figures/tables, algorithms, theory derivations and decisive
-formulas use `templates.md` in every command, without hints. Abstract semantic
+formulas use `templates.md`, without hints. Browse (including its review stage)
+instead presents the abstract as one paragraph card with sentence-linked Hints,
+as defined in `prompts/browse.md`. In standalone annotation, abstract semantic
 labels remain standalone headings. The other special cards use a heading and
 ordinary Markdown prose/lists; they are not limited to one conclusion line.
 Those cards replace any generic browse card for the same logical content.

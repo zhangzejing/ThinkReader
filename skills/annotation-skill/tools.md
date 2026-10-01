@@ -45,11 +45,18 @@ destroy its meaning.
 
 For `/browse` and shared special cards, group contiguous same-section
 EvidenceUnits into one semantic block. Shared special cards use plain Markdown
-and no hints. Only ordinary browse paragraph cards may bind hints to ordered
+and no hints, except browse abstracts which follow the paragraph-card rule.
+Browse paragraph cards may bind hints to ordered
 selector refs. The tool creates the group anchor and copies selected hint text
 without expanding selections merely to cover connective text.
 Hints may omit selectors and remain plain supporting text. Missing or unmatched
 Hint targets do not invalidate the card; they never fall back to the whole block.
+
+In the current native/continuous protocol, App paragraph targets supply numbered
+sentence boundaries. Use `sentence_range: [first,last]` on each Hint instead of
+copying selectors or quotes. All supplied Hints together must cover every sentence
+of their paragraph exactly once, in source order (at most five items). App checks
+the partition and resolves each range independently against real PDF text.
 
 ## `clue.create-from-evidence`
 

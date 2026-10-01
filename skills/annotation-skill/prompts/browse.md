@@ -1,91 +1,102 @@
-# Browse card command
+# Browse: a connected guide beside the paper
 
-Use for `/browse`. Build the smallest ordered set of cards that lets a reader
-follow the paper's problem, argument, method, evidence and conclusion without
-reading every paragraph. This is sequential browsing, not source-coverage
-accounting and not a keyword index.
+Help a reader understand how the paper's argument develops. Read the App-supplied
+full context once, then follow the paragraph queue in source order. Every target
+in the user's scope needs a saved explanation or an explicitly reused equivalent
+card. Coverage counts paragraphs, not headers, page numbers or reference entries.
+Group adjacent paragraphs only when they express one move; do not silently omit
+body paragraphs to produce a small highlights list.
 
-- Partition only after reading a complete section.
-- Group by semantic move rather than raw paragraph count. Merge adjacent
-  paragraphs or list items when they express one taxonomy, premise, procedure,
-  comparison or conclusion; keep unrelated moves separate.
-- Keep a complete algorithm or continuous
-  formula derivation in one card when splitting it would destroy the reasoning.
-  Do not emit several adjacent cards for the steps of one derivation; use one
-  `理论推导` walk-through card with short numbered steps in its Markdown body,
-  not hints. A computational formula or method mechanism alone is not a
-  derivation. Treat a non-derivation `主要方法` as an ordinary browse card.
-- Use the shared special-card template for an abstract facet, Figure/table,
-  algorithm, theory derivation or key formula. It replaces the generic browse card
-  for that content. Special cards use no hints and follow their own heading/body
-  format; the heading-only and hint rules below apply only to ordinary browse
-  paragraph cards.
-- Apply the same rule to appendices; position is not a reason to omit content.
-- Each ordinary browse card body is exactly one `###` heading that states the
-  whole semantic block as one complete, plain sentence. Include a subject and
-  a decisive predicate; a short noun phrase such as “推断不可解性” is invalid.
-  Prefer roughly 14–32 Chinese characters or a similarly compact sentence in the selected language, but preserve essential names,
-  conditions and relations. Read headings in order before applying: by
-  themselves they must tell the paper's continuous story. Do not add prose
-  below the heading.
-- Use `theme` for browse cards. This is a presentation convention owned by the
-  Skill, not a service rule.
-- For ordinary browse paragraph cards, add only the ordered hints needed to
-  expose internal structure: 0–3. Use zero hints when the sentence-title already
-  states the whole semantic move and no internal list, contrast, variable role
-  or sequence needs exposure. Prefer roughly 8–18
-  Chinese characters or a short phrase in the selected language. A hint names one list item, step, variable role,
-  comparison or consequence; it does not paraphrase the whole source or repeat
-  the title. Avoid lead-ins such as “本段介绍了”.
-- A hint may omit its source target and remain plain supporting text. Do not force
-  a target merely to make it interactive. When bound, use a distinct local passage
-  that actually supports that hint, not the whole parent block.
-- A hint may return consecutive selector refs spanning adjacent EvidenceUnits.
-  The App copies the selected source and creates local anchors; the LLM must not
-  copy or concatenate source text. Unselected connective text need not be
-  absorbed into a hint.
-- `covered_evidence_ids`, when present, names the contiguous same-section, same-page units
-  intentionally grouped into this semantic block. It is not a whole-paper
-  coverage ledger, and units may be omitted when they add no new step to the
-  browsing story.
-- Review `preceding_card_titles` to connect the new section to the story so far.
-  Inspect ALL existing cards, including ordinary phrase/area cards from earlier
-  commands. Return `reuse_annotation_ids` when a card already states the same
-  claim; a different heading, color or browse/annotation presentation is not new
-  information. Reuse takes priority over restyling an existing card to this
-  command's template. Add a card only for an additional supported fact, relation,
-  condition or explanation; do not repeat the old claim in new words.
-- Prefer area cards for natural blocks. Phrase cards are allowed for precise
-  abstract claims, terms, numbers and other short evidence where a block card
-  would be less truthful. After understanding the full storyline, select 5–15 evenly distributed
-  storyline area cards and submit those new cards with pin=true. The App owns
-  their layout; no model-authored coordinates.
+## Connected titles
 
-For an introduction followed by two numbered obstacles, create one card such
-as `### 两类障碍使一般变分推断难以高效计算`, with two short hints bound to
-the two numbered items. If the next list states three tasks solved by the paper,
-make that a second card. Do not create separate “不可解性”“大数据约束” cards
-whose headings fragment one argument.
+An ordinary card body is exactly one `###` heading: a complete, plain sentence
+stating what this paragraph adds. No prose below it. Prefer roughly 14–32 Chinese
+characters or a compact sentence in the selected language; named subjects and
+meaningful conditions take precedence over length.
 
-Example for the two successive lists in the VAE problem statement (only if
-supported by the actual section being read):
+- Maintain the referent across titles: the authors, the named method/model, then
+  its introduced components. Reintroduce the name after a section break. Avoid
+  switching from Dreamer to an isolated loss name or unexplained acronym.
+- State who does what, to address which problem, or with what measured result.
+  “三项损失与 free bits” names ingredients but explains neither their role nor
+  their connection to the world model. “本段介绍” alone is not an explanation.
+- Use the actual relation: motivation → gap → proposal; component → mechanism →
+  training; question → experiment → result → qualification. These are reading
+  relations, not compulsory headings for every paper.
+- Preserve source order. A connective must be supported: sequence or correlation
+  does not establish causality. Sparse rewards explain why Minecraft is difficult,
+  not why Dreamer succeeds. Do not invent a causal bridge to improve fluency.
+- Distinguish the author's claim, experimental observation and reader's inference.
+  Keep the task, metric, baseline and condition that make a result meaningful.
+- Each paragraph adds a distinct point. Supporting paragraphs should expose the
+  new evidence or qualification, rather than repeat the previous conclusion.
+- Introduce terms through their role before relying on shorthand. Familiarity
+  with a label does not explain why the paper needs the component.
+- Check preceding saved titles while writing the next group. Titles alone should
+  read as connected prose, while each card remains understandable independently.
+  Do not postpone saving for a final global rewrite.
 
-```text
-### 后验难解与大数据要求可扩展的近似推断
-1. 边缘似然与后验积分难解
-2. 大数据需小批量或单样本更新
+Illustrative contrast, only when supported by the current paper:
+“带下限的回报归一化” → “Dreamer 归一化回报，使同一策略设置适用于不同奖励尺度”。
+Do not copy the example's factual claim to another source.
 
-### 统一框架近似求解参数学习与两类概率推断
-1. 近似ML/MAP参数估计
-2. 给定观测的潜变量后验推断
-3. 边缘推断支持去噪与修复
-```
+## Card scope and presentation
 
-These are two cards, not five cards: the first two hints map to the two
-obstacles and the next three map to the three proposed tasks. Do not force the
-second list into two hints and lose its distinction between posterior and
-marginal inference. Each card groups its introduction with its own list.
+Use `paragraph_ids` and `body_md`; App binds PDF areas. Group only consecutive
+same-page, same-section targets expressing one move. Cross-page continuations
+keep separate anchors. Use `color="theme"`; pin useful storyline area cards with
+`pin=true`. Pinning is presentation, not a limit on total cards or coverage.
 
-## Output language and document type
+Use 0–5 Hints as a paragraph's supporting explanation. Zero is appropriate when
+the title already explains a single simple point. Otherwise partition the ENTIRE
+paragraph into 1–5 ordered, non-overlapping groups of adjacent App sentences,
+using `sentence_range: [first, last]` (inclusive, numbered from 1) and `body_md`.
+App supplies the boundaries and resolves the PDF targets; do not copy quotes or
+invent coordinates. Group by meaning: problem/qualification, proposal/mechanism,
+observation/interpretation, condition/limit. Do not split a premise from its
+necessary qualification, distribute sentences evenly, or repeat the title.
+Explain what each group adds in a compact complete clause, usually 15–45 Chinese
+characters; an important condition takes precedence over brevity. A point may
+cover one or several sentences. All sentences must be covered exactly once when
+Hints are present. For a grouped card, each Hint also supplies `paragraph_id`.
+Write the title and Hints together in one continuous card; no separate planning
+pass, per-sentence tools or end-of-paper polishing pass.
 
-Use the language selected for the current task for ALL titles, headings, labels and prose. Chinese examples below illustrate semantics only; translate them for English output. For paper_type=other (fixtures, test pages and non-research material), choose a useful concise structure from the actual evidence instead of forcing a research/survey template. Never invent results to fill a template.
+Include the abstract as a paragraph card titled `### 摘要：〈主要内容概括〉`
+(or `### Abstract: <main point>` in English). Its Hints carry the explanations
+previously expressed by separate inline abstract facets, anchored to their exact
+sentence groups. Follow the abstract's own order and include only supported
+facets; do not force six labels into five Hints. Read existing inline notes for
+useful explanations but preserve them as user data; do not delete or restyle them.
+Reuse an existing abstract card only if it already provides this overall title
+and sentence-linked breakdown; separate inline facets are context for that card,
+not a substitute for it.
+
+Figures/tables, algorithms, continuous derivations and key
+formulas retain `templates.md`: concise Markdown bodies, no hints. A derivation
+is one walkthrough, not one card per equation. Ordinary method prose follows
+the ordinary paragraph-card rule. Special cards replace generic explanations:
+bind their saved IDs to the paragraph with `reuse`. The abstract uses the
+paragraph title-and-Hints rule above, which takes precedence over the shared
+facet template for browse. Figure cards anchor to the complete App-grouped image
+panels rather than the caption; inspect the supplied complete image and caption.
+
+Inspect existing previews in each group; retrieve full cards only when necessary.
+Reuse equivalent claims without changing human edits, authorship or presentation.
+Save every ready card/small group immediately. The response includes the next
+pending targets when using MCP. With continuous output, all pending targets are
+already supplied: keep emitting cards in the same turn, including after image
+calls, without waiting for another group. Continue until `remaining=0`. Appendix paragraphs use the same
+standard. Explicit user scope overrides whole-paper coverage.
+
+## Reading-order return
+
+The App appends all saved/reused cards grouped by source section and PDF reading
+order, using real annotation URLs and consecutive numbering. This includes every
+card, not just pinned cards or a selected 5–15-item list. Final model prose need
+only state results and actual gaps; do not repeat the full itinerary. Generated
+prose uses the selected language; non-research texts retain their own structure.
+
+Method reference: [UNC Skimming](https://learningcenter.unc.edu/tips-and-tools/skimming/)
+informs previewing, paragraph main ideas and rhetorical transitions. Paragraph
+coverage and live saves are ThinkReader requirements, not claims from that guide.
