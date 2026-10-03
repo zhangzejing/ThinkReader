@@ -45,18 +45,18 @@ flowchart LR
 
 ### Download the app
 
-ThinkReader 0.9.59 is available for Windows x64. The binaries are unsigned.
+ThinkReader 0.9.60 is available for Windows x64. The binaries are unsigned.
 
-- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.59/ThinkReader-Setup-0.9.59-win_x64.exe)
-- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.59/ThinkReader-0.9.59-win_x64.exe)
-- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.59/ThinkReader-0.9.59-win_x64.zip)
-- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.59)
+- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.60/ThinkReader-Setup-0.9.60-win_x64.exe)
+- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.60/ThinkReader-0.9.60-win_x64.exe)
+- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.60/ThinkReader-0.9.60-win_x64.zip)
+- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.60)
 
 From 0.8.7, Help & updates checks on startup and shows a download icon in the same theme color as Agents and Library Home when an update is available. Open it to download and install the update. Versions through 0.8.6 need one manual upgrade first.
 
-If an older version restarts without changing its version number, run the 0.9.59 installer once. Later in-app updates install silently in the existing directory.
+If an older version restarts without changing its version number, run the 0.9.60 installer once. Later in-app updates install silently in the existing directory.
 
-**macOS Apple Silicon preview 0.9.59:** [Download DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.59-macos-preview.1/ThinkReader-0.9.59-mac_arm64.dmg) · [Preview notes and checksums](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.59-macos-preview.1). This is a separate prerelease for manual installation. It uses ad-hoc signing and is not notarized; macOS may block opening it. Windows remains the stable Latest release. Intel and Mac automatic updates are not covered by this preview.
+**macOS Apple Silicon preview 0.9.60:** [Download DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.60-macos-preview.1/ThinkReader-0.9.60-mac_arm64.dmg) · [Preview notes and checksums](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.60-macos-preview.1). This is a separate prerelease for manual installation. It uses ad-hoc signing and is not notarized; macOS may block opening it. Windows remains the stable Latest release. Intel and Mac automatic updates are not covered by this preview.
 
 ### First use
 
