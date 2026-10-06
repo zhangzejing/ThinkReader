@@ -32,9 +32,10 @@ the whole-paper map and each complete section.
   for an abstract facet, Figure/table, algorithm, theory derivation or key formula.
   Their lists are ordinary Markdown in `body_md`, never hints.
 
-Quick means fewer model-selected actions, not fragmentary reading. Every
-section remains in scope. Unlike browse's rapid guide, annotation may take more
-time for consequential evidence checks; continue saving valid work throughout.
+Read each complete section once and save its ready cards as you go. Give a real
+first reply within 30–60 seconds. Aim to finish no slower than `/browse` on the
+same paper and scope. Keep all required evidence checks; repair only actual
+rejections or gaps, without rereading or rewriting accepted work.
 
 ## Output language and document type
 

@@ -19,8 +19,8 @@ sections to write each card. Whole-paper coverage means inspecting all available
 evidence, not placing a mark in every paragraph. Never mark unseen evidence reviewed.
 
 Give a brief user-facing update as work starts and meaningful updates as reading
-and saving progress. Early visible feedback matters more than total completion time;
-there is no fixed completion deadline. Keep useful notes concise and submit one batch when it fits the tool's limit; for longer
+and saving progress. Give a real first reply within 30–60 seconds and aim to
+finish no slower than `/browse` on the same paper and scope. Keep useful notes concise and submit each ready group when it fits the tool's limit; for longer
 papers, submit coherent groups as evidence pages are read. Check the returned
 committed/rejected items and repair only rejected useful marks. Do not fetch all
 saved cards again after confirmed writes unless a specific discrepancy needs it.

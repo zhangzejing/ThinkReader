@@ -7,12 +7,21 @@ card. Coverage counts paragraphs, not headers, page numbers or reference entries
 Group adjacent paragraphs only when they express one move; do not silently omit
 body paragraphs to produce a small highlights list.
 
+Start with one brief visible acknowledgment before tools or planning. Save the
+first supported text card promptly, before unrelated image inspection. Give useful
+progress about every 20–30 seconds. Aim for about three minutes for an ordinary
+browse; preserve scope and evidence when a long paper needs more time. Never claim
+completion early to meet a timing target.
+
 ## Connected titles
 
 An ordinary card body is exactly one `###` heading: a complete, plain sentence
 stating what this paragraph adds. No prose below it. Prefer roughly 14–32 Chinese
 characters or a compact sentence in the selected language; named subjects and
 meaningful conditions take precedence over length.
+Apply the ASD-STE100-inspired title and body language in `presentation.md` to
+ordinary titles and all special-card prose. State one point directly; remove
+filler and repetition without losing conditions or mathematical meaning.
 
 - Maintain the referent across titles: the authors, the named method/model, then
   its introduced components. Reintroduce the name after a section break. Avoid
@@ -48,15 +57,32 @@ keep separate anchors. Use `color="theme"`; pin useful storyline area cards with
 `pin=true`. Pinning is presentation, not a limit on total cards or coverage.
 
 Use 0–5 Hints as a paragraph's supporting explanation. Zero is appropriate when
-the title already explains a single simple point. Otherwise partition the ENTIRE
-paragraph into 1–5 ordered, non-overlapping groups of adjacent App sentences,
-using `sentence_range: [first, last]` (inclusive, numbered from 1) and `body_md`.
+the title already explains a single simple point. Otherwise partition all supplied
+sentence numbers into 1–5 ordered, non-overlapping groups of adjacent App sentences,
+using `sentence_end: last` (numbered from 1) and `body_md`. For example, ends
+`1, 4, 6` mean groups `1`, `2–4`, `5–6`. The App derives each group's start.
+In continuous card delivery, use the single supplied `sentences` table and
+`sentence_end`; `sentence_basis: pdf-text` marks original PDF numbering. Do not
+use `sentence_range` in that transport. Do not explain facts beyond a target's
+`hint_scope`: an unnumbered page-end fragment
+is not a complete source sentence. Explain a supplied PDF continuation on its
+own page, using its target text.
+In context tools, use the App's
+`pdf_sentences` when present: its numbers refer to the original PDF
+and need no copied formulas. Use its count even if extraction produced a different
+`sentences` count; its `starts_with` and `ends_with` identify each PDF span.
+Otherwise use the supplied `sentences` numbers. The final end must equal the last
+number in the chosen list. Existing
+`sentence_range: [first, last]` requests remain supported.
 App supplies the boundaries and resolves the PDF targets; do not copy quotes or
 invent coordinates. Group by meaning: problem/qualification, proposal/mechanism,
 observation/interpretation, condition/limit. Do not split a premise from its
 necessary qualification, distribute sentences evenly, or repeat the title.
-Explain what each group adds in a compact complete clause, usually 15–45 Chinese
-characters; an important condition takes precedence over brevity. A point may
+Apply the ASD-STE100-inspired Hint language in `presentation.md`: explain what
+each group adds with one direct sentence, usually 15–35 Chinese characters or
+at most 25 English words. Add only an indispensable condition or contrast;
+remove filler, title repetition and clause-by-clause paraphrases. An important
+condition takes precedence over brevity. A point may
 cover one or several sentences. All sentences must be covered exactly once when
 Hints are present. For a grouped card, each Hint also supplies `paragraph_id`.
 Write the title and Hints together in one continuous card; no separate planning

@@ -164,14 +164,12 @@ methods merely to satisfy a visual budget.
 
 ## Safety
 
-Evidence grouping means one PDF annotation card for one source fact, not merely a
-collapsed list of Markdown links. For a contiguous author/affiliation block, supply
-all its exact refs in `map.author_evidence_refs`; group actions cite only the actual
-affiliation text, never every citation in the paper hub. Preserve every fragment's
-provenance in the grouped card. Nearby evidence of different claims stays separate.
-For example, 22 author fragments should yield one author card on that page, not 22
-cards hidden behind an `Evidence (22)` disclosure. Reuse existing cards and preserve
-user edits, replies and pinned layouts.
+For a contiguous author/affiliation block, supply all its exact refs in
+`map.author_evidence_refs`; group actions cite only the actual affiliation text,
+never every citation in the paper hub. Preserve every fragment's provenance in
+the Wiki citations. Nearby evidence of different claims stays separate. These
+references do not create PDF cards or consolidate saved annotations. Reuse existing
+cards only for tags, preserving user edits, replies and pinned layouts.
 
 When a survey looks isolated in Overview, inspect its bibliography against Library
 paper identities before adding `review`. Shared subject matter is insufficient.
@@ -186,4 +184,4 @@ Example: *Programmable metasurfaces for future photonic artificial intelligence*
 targets scalable programmable photonic AI. Do not suppress that grounded Address
 edge by classifying all non-experimental papers as surveys.
 
-The wiki reads PDF/Intelligence/optional annotations and existing outputs but writes only through the wiki gateway. After a successful commit the App adds `wiki` to an existing annotation covering the cited evidence, without changing its content or appearance. Only uncovered evidence receives a tiny `### wiki` work-trace card. Do not create duplicate cards for output bookkeeping. It never modifies `RAW/`, Intelligence or another paper's owned body.
+The wiki reads PDF/Intelligence/optional annotations and existing outputs but writes only through the wiki gateway. After a successful commit the App adds `wiki` to an existing annotation covering the cited evidence, without changing its content or appearance. Keep uncovered evidence in the Wiki citations. Do not create PDF cards for evidence or output bookkeeping. It never modifies `RAW/`, Intelligence or another paper's owned body.

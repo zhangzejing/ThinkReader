@@ -29,7 +29,14 @@ does not register delivery. Otherwise use the MCP steps below.
 3. Browse/review ordinary actions need `paragraph_ids` and `body_md`, with optional
    hints/color/pin. App owns the geometry; no copied paragraph quote or coordinates.
    Paragraph targets include numbered sentence offsets. Browse Hints use
-   `sentence_range: [first,last]` and `body_md`; their ordered ranges cover the
+   `sentence_end: last` and `body_md`; the App derives consecutive starts. Use
+   the single numbered `sentences` table during continuous delivery; its
+   `sentence_basis` identifies PDF or semantic text. In context tools, use
+   `pdf_sentences` when available, without copying formulas or quotes.
+   PDF numbers take precedence when their count differs from extracted sentences.
+   Its start/end excerpts identify each span; the final end equals its last number.
+   Otherwise use `sentences`; `sentence_range: [first,last]` remains supported.
+   Their ordered groups cover the
    entire paragraph once, with 0–5 items. For grouped cards also set each Hint's
    `paragraph_id`. The abstract follows this paragraph rule with an Abstract:
    main-point title; standalone annotation retains its separate facet cards.
@@ -72,7 +79,9 @@ Disclose inaccessible or unchecked visuals honestly. Special cards use `template
 normally already supplied; otherwise load it using `thinkreader_skill(name,
 resource="templates.md")`. Do not substitute flash standards for normal reading.
 
-Hints use brief body_md and optional local quote. Missing/unmatched quotes save
+Hints follow the ASD-STE100-inspired concise language in presentation.md while
+composing: one direct point, no filler or title repetition, with essential
+conditions and technical meaning intact. Hints use brief body_md and optional local quote. Missing/unmatched quotes save
 Hint text without a highlight; never substitute the whole parent block. A Hint
 may name another evidence_id in the card's grouped paragraphs/covered evidence.
 `pin=true` pins an area card; App owns layout. Keep cross-page anchors separate.

@@ -1,6 +1,6 @@
 # Deep annotation command
 
-Use for `/deep-annotation`. Perform a slower close reading that supports critical
+Use for `/deep-annotation`. Perform a close reading that supports critical
 review, follow-up questions, wiki projection, reporting and reproduction work.
 
 In addition to the shared rules:
@@ -31,6 +31,10 @@ In addition to the shared rules:
 Deep annotation may create more actions than `/annotation`, but depth comes
 from better evidence choice and sharper distinctions, never longer prose.
 Multiple marks in one paragraph require genuinely different claims or mechanisms.
+Read each complete section once and save ready cards throughout. Give a real
+first reply within 30–60 seconds and aim to finish no slower than `/browse` on
+the same paper and scope. Keep the required checks and depth. Repair only actual
+errors or missing evidence; do not add a separate planning or polishing pass.
 
 ## Output language and document type
 

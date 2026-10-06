@@ -45,6 +45,72 @@ Those cards replace any generic browse card for the same logical content.
 `### 主要方法` outside the abstract is an ordinary semantic annotation, not a
 special template. It follows the active command's normal body and hint rules.
 
+## Concise annotation language
+
+Use ASD-STE100-inspired controlled language for newly written explanations.
+This adapts its clarity principles to research notes and Chinese; it does not
+claim compliance with the complete English specification or its dictionary.
+
+Apply this language to ALL newly authored card titles, body prose, list items and
+Hints, including figure, table, algorithm and derivation explanations. Retain
+each template's structure and the fixed semantic headings used by phrase cards.
+Ordinary browse titles state one concrete claim. Prefer 14–28 Chinese characters
+or a short English sentence; remove labels such as “本段介绍” and repeated context.
+Body sentences and list items each express one point. Prefer active voice,
+stable technical terms and at most 25 English words per sentence. In Chinese,
+use a short direct sentence and split independent claims. Keep essential
+conditions, evidence, numbers, uncertainty and mathematical meaning. These rules
+guide drafting; never count, truncate or rewrite completed/user-authored cards.
+
+- One Hint explains one contribution from its selected sentences in ONE short,
+  complete sentence. Draft toward 15–35 Chinese characters (roughly 2–3 short
+  lines in a normal card), or 12–20 English words; descriptive English sentences
+  should stay within 25 words. Before saving, reread any Hint longer than about
+  45 Chinese characters or 25 English words and remove secondary details. These
+  are flexible drafting limits: keep an essential condition, decisive number,
+  uncertainty or technical name even when it requires more space. They are not
+  character-count validation, and the App must never truncate a saved Hint.
+- A source range can contain several sentences without requiring a clause for
+  each sentence. State the single result, mechanism or limitation that helps
+  the reader understand this range. Omit citation lists, panel identifiers,
+  repeated variable definitions and background already given in the title.
+  Mention a figure/panel only when it disambiguates the finding. Add a second
+  short sentence only when a necessary condition would otherwise be lost.
+- Name the actor, model or variable and its action. Prefer active voice and
+  familiar, concrete words. Use the same technical name for the same concept;
+  retain necessary proper names, mathematical symbols and units.
+- Review every draft before emitting it. For a numeric time series, give the
+  main trend and the decisive endpoints rather than every intermediate year
+  and value. For a comparison, keep the key effect and its uncertainty; sample
+  sizes, test statistics and citations can remain in the highlighted source.
+  Do not treat every source number as a required number in the Hint. A long
+  compound result should become one focused finding, not a compressed list.
+- Start with the fact. Remove lead-ins such as “这说明”, “值得注意的是” and
+  “the authors go on to explain that”. Do not repeat the card title, translate
+  every source clause, give generic reading advice or restate a glossary.
+- Group adjacent source sentences by one semantic move, not equal length.
+  Split independent points within the existing 0–5 Hint partition; retain
+  complete sentence coverage. Do not add redundant Hints to meet a quota.
+- Preserve numbers, comparison baselines, uncertainty, negation, causes and
+  applicability conditions when they determine the Hint's claim. Prefer a necessary extra short clause to a false
+  simplification. Do not count, truncate or rewrite saved/user-authored Hints.
+
+For example, “研究结果表明，该模型只有在数据充足的情况下才可能提升预测精度”
+becomes “数据充足时，该模型可能提高预测精度。” Keep “可能” and the data condition.
+“图 3C 的紫线是 Wyrtki 周期，充放电效率 F1 和 F2 的变化主导了这一周期，
+这与已有研究相一致” becomes “充放电效率 F1、F2 主导 Wyrtki 周期。”
+“实际 ENSO 不是单频，2005 年后 Niño-3 分成约 1.5 年和 3 年两个主调，Wyrtki
+周期只抓住较长的分量” becomes “2005 年后出现双主频，单频近似漏掉短周期。”
+“The authors go on to explain that the model does not use future observations
+when it predicts the next state” becomes “The model predicts the next state
+without future observations.” Keep the original technical meaning.
+“1960–1970 年代约 6 个月、1980 年代约 9 个月、1990 年代末约 6 个月、2000 年代
+约 3 个月” becomes “观测超前先延长，随后从约 9 个月降至 3 个月。”
+
+Reference: [ASD-STE100 Issue 9](https://www.asd-ste100.org/assets/files/ASD-STE100_ISSUE9.pdf),
+descriptive-writing rules 6.1, 6.3 and 6.5, and the
+[official explanation of consistent technical vocabulary](https://www.asd-ste100.org/about_STE.html).
+
 ## Color semantics
 
 - evidence bookkeeping: `gray`

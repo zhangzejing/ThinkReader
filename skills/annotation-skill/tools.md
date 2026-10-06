@@ -53,10 +53,19 @@ Hints may omit selectors and remain plain supporting text. Missing or unmatched
 Hint targets do not invalidate the card; they never fall back to the whole block.
 
 In the current native/continuous protocol, App paragraph targets supply numbered
-sentence boundaries. Use `sentence_range: [first,last]` on each Hint instead of
-copying selectors or quotes. All supplied Hints together must cover every sentence
+sentence boundaries. Prefer `sentence_end: last` on each Hint; the App derives
+consecutive starts, initially 1. For example, ends `1, 4, 6` create groups `1`,
+`2–4`, and `5–6`. Use `pdf_sentences` when supplied: these are boundaries from
+the original PDF, so formulas do not need to be copied or matched by the Agent.
+Its numbering takes precedence over a differing extracted sentence count; the
+last Hint end must equal its last number. Start/end excerpts identify the spans.
+Continuous card delivery requires `sentence_end` and supplies one numbered
+`sentences` table. A Hint without a valid PDF anchor is rejected, not counted as
+saved. Other existing `sentence_range: [first,last]` proposals remain supported. Do not combine
+the two forms or copy selectors or quotes. All supplied Hints must cover every sentence
 of their paragraph exactly once, in source order (at most five items). App checks
-the partition and resolves each range independently against real PDF text.
+the partition and creates each mark from verified PDF text items. If a boundary
+cannot be established, the Hint remains unlinked.
 
 ## `clue.create-from-evidence`
 
