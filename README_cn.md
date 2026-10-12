@@ -54,13 +54,13 @@ ThinkReader 0.9.62 提供 Windows x64 版本，当前二进制文件未签名。
 
 如果旧版本点击“安装并重启”后版本号仍未变化，请使用上方 0.9.62 安装版覆盖安装一次。此后 App 内更新会在原目录静默完成。
 
-**macOS Apple Silicon 0.9.62 预览版：**[下载 DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.62-macos-preview.1/ThinkReader-0.9.62-mac_arm64.dmg) · [预览说明与校验值](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.62-macos-preview.1)。这是供手动安装的独立预发布版本，采用 ad-hoc 签名，尚未经过 Apple 公证，macOS 可能阻止打开。Windows 仍为稳定 Latest；本次预览不覆盖 Intel 和 Mac 自动更新。
+**macOS Apple Silicon 0.9.63 预览版：**[下载 DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63-macos-preview.1/ThinkReader-0.9.63-mac_arm64.dmg) · [预览说明与校验值](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.63-macos-preview.1)。要求 macOS 14 及以上。这是供手动安装的独立预发布版本，采用 ad-hoc 签名，尚未经过 Apple 公证，macOS 可能阻止打开。Windows 仍为稳定 Latest；本次预览不覆盖 Intel 和 Mac 自动更新。
 
 ### 第一次使用
 
 无需手动运行命令。首次启动时可选择本地解析（下载环境与模型）或 MinerU V1 API 解析（填写 API Token，仅 Standard 层级，无需安装 CLI），App 会逐步引导。
 
-1. 新建一个 ThinkReader 论文库，App 会自动创建其中的文件目录。
+1. 首次启动自动创建并打开 `default` 论文库；可通过仓库菜单新建或打开其他库。
 2. 将论文 PDF 放入刚才论文库下的 `RAW/` 文件夹，或从App库主页导入。
 3. MinerU 会自动解析导入内容；本地 MinerU 首次解析需要下载模型，因此耗时较长。
 4. 打开论文，输入 `@Agent /browse`、`/summary` 或 `/annotation`。

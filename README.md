@@ -56,13 +56,13 @@ From 0.8.7, Help & updates checks on startup and shows a download icon in the sa
 
 If an older version restarts without changing its version number, run the 0.9.62 installer once. Later in-app updates install silently in the existing directory.
 
-**macOS Apple Silicon preview 0.9.62:** [Download DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.62-macos-preview.1/ThinkReader-0.9.62-mac_arm64.dmg) · [Preview notes and checksums](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.62-macos-preview.1). This is a separate prerelease for manual installation. It uses ad-hoc signing and is not notarized; macOS may block opening it. Windows remains the stable Latest release. Intel and Mac automatic updates are not covered by this preview.
+**macOS Apple Silicon preview 0.9.63:** [Download DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63-macos-preview.1/ThinkReader-0.9.63-mac_arm64.dmg) · [Preview notes and checksums](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.63-macos-preview.1). Requires macOS 14 or newer. This is a separate prerelease for manual installation. It uses ad-hoc signing and is not notarized; macOS may block opening it. Windows remains the stable Latest release. Intel and Mac automatic updates are not covered by this preview.
 
 ### First use
 
 No terminal setup is required. On first launch, choose on-device parsing (local runtime and models) or the MinerU V1 API (API Token, Standard parsing; no CLI required); the App guides you through the required steps.
 
-1. Create a ThinkReader Library; the App creates its file structure automatically.
+1. On first launch, ThinkReader creates and opens a `default` Library. Use the Library menu to create or open another Library.
 2. Put your paper PDF in that Library's `RAW/` folder, or import it from the Library home.
 3. MinerU automatically processes imported papers. Local MinerU downloads models before its first extraction, so this step can take a while.
 4. Open the paper and start with `@Agent /browse`, `/summary`, or `/annotation`.
