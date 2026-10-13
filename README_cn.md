@@ -54,7 +54,7 @@ ThinkReader 0.9.62 提供 Windows x64 版本，当前二进制文件未签名。
 
 如果旧版本点击“安装并重启”后版本号仍未变化，请使用上方 0.9.62 安装版覆盖安装一次。此后 App 内更新会在原目录静默完成。
 
-**macOS Apple Silicon 0.9.63 预览版：**[下载 DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63-macos-preview.1/ThinkReader-0.9.63-mac_arm64.dmg) · [预览说明与校验值](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.63-macos-preview.1)。要求 macOS 14 及以上。这是供手动安装的独立预发布版本，采用 ad-hoc 签名，尚未经过 Apple 公证，macOS 可能阻止打开。Windows 仍为稳定 Latest；本次预览不覆盖 Intel 和 Mac 自动更新。
+**macOS Apple Silicon 0.9.62 预览版：**[下载 DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.62-macos-preview.1/ThinkReader-0.9.62-mac_arm64.dmg) · [预览说明与校验值](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.62-macos-preview.1)。要求 macOS 14 及以上。这是供手动安装的独立预发布版本，采用 ad-hoc 签名，尚未经过 Apple 公证，macOS 可能阻止打开。Windows 仍为稳定 Latest；本次预览不覆盖 Intel 和 Mac 自动更新。 0.9.63 候选已转为草稿，完成内部验收前暂不公开发布。
 
 ### 第一次使用
 
