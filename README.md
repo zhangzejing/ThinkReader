@@ -58,7 +58,7 @@ If an older version restarts without changing its version number, run the 0.9.62
 
 **macOS Apple Silicon preview 0.9.62:** [Download DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.62-macos-preview.1/ThinkReader-0.9.62-mac_arm64.dmg) · [Preview notes and checksums](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.62-macos-preview.1). Requires macOS 14 or newer. This is a separate prerelease for manual installation. It uses ad-hoc signing and is not notarized; macOS may block opening it. Windows remains the stable Latest release. Intel and Mac automatic updates are not covered by this preview. The 0.9.63 candidate is a draft pending private acceptance; it is not currently published.
 
-**Private macOS acceptance build 0.9.63 (2):** [Acceptance notes and downloads](https://github.com/zhangzejing/ThinkReader-Dev/releases/tag/v0.9.63-dev-acceptance.2). Requires ThinkReader-Dev access. This manual acceptance prerelease includes App-owned cleanup and manual Mac updates; the public 0.9.63 candidate remains a draft and stable downloads are unchanged.
+**Private macOS acceptance build 0.9.63 (3):** [Acceptance notes and downloads](https://github.com/zhangzejing/ThinkReader-Dev/releases/tag/v0.9.63-dev-acceptance.3). Requires ThinkReader-Dev access. This manual acceptance prerelease restores independent full-paper annotations, complete guide cards and precise PDF marks; the public 0.9.63 candidate remains a draft and stable downloads are unchanged.
 
 ### First use
 
