@@ -56,6 +56,8 @@ ThinkReader 0.9.62 提供 Windows x64 版本，当前二进制文件未签名。
 
 **macOS Apple Silicon 0.9.62 预览版：**[下载 DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.62-macos-preview.1/ThinkReader-0.9.62-mac_arm64.dmg) · [预览说明与校验值](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.62-macos-preview.1)。要求 macOS 14 及以上。这是供手动安装的独立预发布版本，采用 ad-hoc 签名，尚未经过 Apple 公证，macOS 可能阻止打开。Windows 仍为稳定 Latest；本次预览不覆盖 Intel 和 Mac 自动更新。 0.9.63 候选已转为草稿，完成内部验收前暂不公开发布。
 
+**macOS 0.9.63 内部验收包 2：**[验收说明与下载](https://github.com/zhangzejing/ThinkReader-Dev/releases/tag/v0.9.63-dev-acceptance.2)。需要 ThinkReader-Dev 仓库访问权限；本包供手动验收，改为 App 内清理和 Mac 手动更新。公开 0.9.63 仍为草稿，稳定下载不变。
+
 ### 第一次使用
 
 无需手动运行命令。首次启动时可选择本地解析（下载环境与模型）或 MinerU V1 API 解析（填写 API Token，仅 Standard 层级，无需安装 CLI），App 会逐步引导。
