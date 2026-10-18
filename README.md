@@ -45,24 +45,23 @@ flowchart LR
 
 ### Download the app
 
-ThinkReader 0.9.63 is available for Windows x64. The binaries are unsigned.
+ThinkReader **0.9.70** is available for **Windows x64 and macOS Apple Silicon**.
 
-This release substantially improves annotation-command execution speed and source-location accuracy, and fixes Clue hover, card styling, and saved automatic layouts.
+This release fixes completion reporting for annotations limited to a selected section, reopening a recreated `default` Library, and detected figure, table, equation and algorithm borders. Detected regions now share the area-annotation theme style.
 
-- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63/ThinkReader-Setup-0.9.63-win_x64.exe)
-- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63/ThinkReader-0.9.63-win_x64.exe)
-- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63/ThinkReader-0.9.63-win_x64.zip)
-- [Release notes](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.63)
+- [Windows installer](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.70/ThinkReader-Setup-0.9.70-win_x64.exe)
+- [Portable Windows app](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.70/ThinkReader-0.9.70-win_x64.exe)
+- [Windows ZIP](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.70/ThinkReader-0.9.70-win_x64.zip)
+- [macOS Apple Silicon DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.70/ThinkReader-0.9.70-mac_arm64.dmg)
+- [Release notes, checksums and validation limits](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.70)
 
-From 0.8.7, Help & updates checks on startup and shows a download icon in the same theme color as Agents and Library Home when an update is available. Open it to download and install the update. Versions through 0.8.6 need one manual upgrade first.
+Windows binaries are unsigned. Help & updates checks for new releases and can download the installer. Versions through 0.8.6, or older installations that restart without changing version, need one manual upgrade using the installer above.
 
-If an older version restarts without changing its version number, run the 0.9.63 installer once. Later in-app updates install silently in the existing directory.
-
-**macOS Apple Silicon preview 0.9.63:** [Download DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63-macos-preview.2/ThinkReader-0.9.63-mac_arm64.dmg) · [Preview notes and checksums](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.63-macos-preview.2). Requires macOS 14 or newer. This is a separate prerelease for manual installation. It uses ad-hoc signing and is not notarized; macOS may block opening it. Windows remains the stable Latest release. Intel and Mac automatic updates are not covered by this preview. This preview is built for manual testing; final acceptance on a real Mac is pending.
+The Mac app requires macOS 14 or newer and an Apple Silicon chip. It is ad-hoc signed and not notarized, so macOS may block opening it. Updates require manual installation. Intel Macs and automatic Mac installation are not supported by this release.
 
 ### First use
 
-No terminal setup is required. On first launch, choose on-device parsing (local runtime and models) or the MinerU V1 API (API Token, Standard parsing; no CLI required); the App guides you through the required steps.
+No terminal setup is required. On first launch, choose on-device parsing (local runtime and models) or the MinerU V4 API (API Token, Standard parsing; no CLI required); the App guides you through the required steps.
 
 1. On first launch, ThinkReader creates and opens a `default` Library. Use the Library menu to create or open another Library.
 2. Put your paper PDF in that Library's `RAW/` folder, or import it from the Library home.
@@ -76,7 +75,6 @@ No terminal setup is required. On first launch, choose on-device parsing (local 
 | --- | --- |
 | `/browse` | Organize the paper's main thread into reading cards |
 | `/annotation`, `/deep-annotation` | Annotate the paper at different depths |
-| `/flash-annotation` | Lightweight key-phrase annotation |
 | `/review`, `/deep-review` | Browse, annotate (or deeply annotate), then save a concise evidence-linked summary |
 | `/audit` | Reply with an independent perspective on annotations; check and refine outputs |
 | `/summary` | Create a concise summary for side-by-side reading |
@@ -87,7 +85,7 @@ No terminal setup is required. On first launch, choose on-device parsing (local 
 | `/codebase` | Create a reproduction starter project |
 | `/health-check` | Check Library records and paper-index consistency |
 
-Paper commands default to the focused paper when each task starts. Explicit paths or paper IDs override that default; the Agent resolves natural-language titles and asks when the target is ambiguous. A running task keeps its selected paper. Full-paper reading commands retain their whole-paper scope; a focus changes emphasis. Generated findings and code still need your review.
+Paper commands default to the focused paper when each task starts. Explicit paths or paper IDs override that default; the Agent resolves natural-language titles and asks when the target is ambiguous. A running task keeps its selected paper. Reading commands default to the whole paper. An explicit section restriction limits the task, while a focus changes emphasis. Generated findings and code still need your review.
 
 ## Explore the gallery
 
@@ -101,7 +99,7 @@ System Skills used by ThinkReader commands live in [`skills/`](skills/). Copy a 
 
 | Skill | Used by |
 | --- | --- |
-| `annotation-skill` | `/browse`, `/annotation`, `/flash-annotation`, `/deep-annotation` |
+| `annotation-skill` | `/browse`, `/annotation`, `/deep-annotation` |
 | `audit-skill` | `/audit` |
 | `summary-skill` | `/summary`, `/review`, `/deep-review` |
 | `report-skill` | `/report` |

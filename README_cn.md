@@ -43,24 +43,23 @@ flowchart LR
 
 ### 下载 App
 
-ThinkReader 0.9.63 提供 Windows x64 版本，当前二进制文件未签名。
+ThinkReader **0.9.70** 同时提供 **Windows x64 与 macOS Apple Silicon** 正式版。
 
-本次更新大幅提升批注命令执行速度和定位准确率，并修复 Clue 悬停范围、卡片样式及自动最佳布局保存问题。
+本版修复限定章节批注被误报未完成、删除后重建 `default` 论文库无法打开的问题。图片、表格、公式和算法检测框统一复用区域批注的主题边界样式。
 
-- [Windows 安装版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63/ThinkReader-Setup-0.9.63-win_x64.exe)
-- [Windows 便携版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63/ThinkReader-0.9.63-win_x64.exe)
-- [Windows ZIP 压缩包](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63/ThinkReader-0.9.63-win_x64.zip)
-- [发布说明](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.63)
+- [Windows 安装版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.70/ThinkReader-Setup-0.9.70-win_x64.exe)
+- [Windows 便携版](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.70/ThinkReader-0.9.70-win_x64.exe)
+- [Windows ZIP 压缩包](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.70/ThinkReader-0.9.70-win_x64.zip)
+- [macOS Apple Silicon DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.70/ThinkReader-0.9.70-mac_arm64.dmg)
+- [发布说明、校验值与验证范围](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.70)
 
-从 0.8.7 起，App 启动时检查更新；发现新版后，“帮助与更新”会显示与 Agents、库主页相同主题颜色的下载图标，悬停提示“有可用的更新”。点击后可下载并安装更新。0.8.6 及更早版本需先手动升级一次。
+Windows 二进制文件未签名，可从“帮助与更新”检查新版并下载安装包。0.8.6 及更早版本，或重启后版本号仍未变化的旧安装，需要先用上方安装版手动覆盖升级一次。
 
-如果旧版本点击“安装并重启”后版本号仍未变化，请使用上方 0.9.63 安装版覆盖安装一次。此后 App 内更新会在原目录静默完成。
-
-**macOS Apple Silicon 0.9.63 预览版：**[下载 DMG](https://github.com/zhangzejing/ThinkReader/releases/download/v0.9.63-macos-preview.2/ThinkReader-0.9.63-mac_arm64.dmg) · [预览说明与校验值](https://github.com/zhangzejing/ThinkReader/releases/tag/v0.9.63-macos-preview.2)。要求 macOS 14 及以上。这是供手动安装的独立预发布版本，采用 ad-hoc 签名，尚未经过 Apple 公证，macOS 可能阻止打开。Windows 仍为稳定 Latest；本次预览不覆盖 Intel 和 Mac 自动更新。 本包供手动测试，等待真实 Mac 验收。
+Mac 版要求 macOS 14 及以上和 Apple Silicon 芯片，采用 ad-hoc 签名，尚未经过 Apple 公证，macOS 可能阻止打开。更新需要手动安装，本版不支持 Intel Mac 或 Mac 自动安装更新。
 
 ### 第一次使用
 
-无需手动运行命令。首次启动时可选择本地解析（下载环境与模型）或 MinerU V1 API 解析（填写 API Token，仅 Standard 层级，无需安装 CLI），App 会逐步引导。
+无需手动运行命令。首次启动时可选择本地解析（下载环境与模型）或 MinerU V4 API 解析（填写 API Token，仅 Standard 层级，无需安装 CLI），App 会逐步引导。
 
 1. 首次启动自动创建并打开 `default` 论文库；可通过仓库菜单新建或打开其他库。
 2. 将论文 PDF 放入刚才论文库下的 `RAW/` 文件夹，或从App库主页导入。
@@ -74,7 +73,6 @@ ThinkReader 0.9.63 提供 Windows x64 版本，当前二进制文件未签名。
 | --- | --- |
 | `/browse` | 将论文主线组织为阅读卡片 |
 | `/annotation`、`/deep-annotation` | 以不同深度批注论文 |
-| `/flash-annotation` | 轻量关键短语批注 |
 | `/review`、`/deep-review` | 依次浏览、批注（或深度批注），并保存带证据链接的精炼总结 |
 | `/audit` | 在已有批注上回复独立观点，并核对、微调研究产出 |
 | `/summary` | 生成适合并排阅读的精炼总结 |
@@ -85,7 +83,7 @@ ThinkReader 0.9.63 提供 Windows x64 版本，当前二进制文件未签名。
 | `/codebase` | 建立研究复现的起始项目 |
 | `/health-check` | 检查论文库记录与论文索引一致性 |
 
-论文命令默认处理任务开始时聚焦的论文。显式路径或论文 ID 优先；自然语言标题由 Agent 判断，目标不明确时会询问。运行中的任务保持已选论文。全文阅读命令保持全文范围，关注点用于调整侧重。生成的结论与代码仍需研究者核验。
+论文命令默认处理任务开始时聚焦的论文。显式路径或论文 ID 优先；自然语言标题由 Agent 判断，目标不明确时会询问。运行中的任务保持已选论文。阅读命令默认覆盖全文，明确限定章节时按该范围执行，关注点用于调整侧重。生成的结论与代码仍需研究者核验。
 
 ## 浏览画廊
 
@@ -99,7 +97,7 @@ ThinkReader 命令使用的系统 Skills 在 [`skills/`](skills/) 中。可复�
 
 | Skill | 对应命令 |
 | --- | --- |
-| `annotation-skill` | `/browse`、`/annotation`、`/flash-annotation`、`/deep-annotation` |
+| `annotation-skill` | `/browse`、`/annotation`、`/deep-annotation` |
 | `audit-skill` | `/audit` |
 | `summary-skill` | `/summary`、`/review`、`/deep-review` |
 | `report-skill` | `/report` |
