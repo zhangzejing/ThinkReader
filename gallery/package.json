@@ -43,5 +43,10 @@
     "vite": "8.0.13",
     "wrangler": "4.92.0"
   },
-  "type": "module"
+  "type": "module",
+  "overrides": {
+    "vinext": {
+      "image-size": "2.0.3"
+    }
+  }
 }
